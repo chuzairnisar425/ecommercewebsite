@@ -1,15 +1,20 @@
 import React from 'react';
-import './App.css';
+import MembershipForm from './components/MembershipForm';
+import NewsletterSignup from './components/NewsletterSignup';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Topheader from './components/Topheader';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="display-4">Welcome to React with Bootstrap!</h1>
-        <button className="btn btn-primary">Bootstrap Button</button>
-      </header>
+    <div>
+      <Topheader/>
+      <Header/>
+      <MembershipForm />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
