@@ -3,7 +3,7 @@ const TopHeader = () => {
       <div className="container-fluid bg-dark text-white py-2 border-bottom border-2 border-solid">
         <div className="row">
           <div className="col-md-8 d-flex align-items-center justify-content-center">
-            <span><i className="fas fa-map-marker-alt"></i></span>
+           
             <span className="mx-2 ">20% Off + Free Shipping On Your First Order! Details</span>
           </div>
           <div className="col-md-4 d-flex justify-content-end align-items-center">

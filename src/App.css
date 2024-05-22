@@ -17,3 +17,6 @@ body{
 .bg-black{
   background-color: black;
 }
+.boxshadow{
+box-shadow: 2px 2px 2px 4px grey ;
+}
