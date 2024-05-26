@@ -7,7 +7,7 @@ function SignUp() {
   return (
     <div className=" d-flex justify-content-center align-items-center vh-100 bg-black text-light   p-5">
       <div className="card p-4 bg-black text-white border-light boxshadow" >
-        <h2 className="text-start mb-4 text-light ">Sign Up</h2>
+        <h2 className="text-start mb-4 text-light display-3 ">Sign Up</h2>
         <div className="row align-items-center" style={{ height: '100%' }}>
           <div className="col-md-6 d-flex flex-column justify-content-center">
             <form>
@@ -16,7 +16,7 @@ function SignUp() {
                 <input type="text" className="form-control p-3" id="fullName" placeholder="Full Name" />
               </div>
               <div className="form-group mb-3">
-                <label htmlFor="emailAddress">Email Address</label>
+                <label htmlFor="emailAddress">Enter Email Address</label>
                 <input type="email" className="form-control p-3" id="emailAddress" placeholder="Email Address" />
               </div>
               <div className="form-group mb-3">

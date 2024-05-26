@@ -20,3 +20,6 @@ body{
 .boxshadow{
 box-shadow: 2px 2px 2px 4px grey ;
 }
+.button{
+  font-size: 20px;
+}
