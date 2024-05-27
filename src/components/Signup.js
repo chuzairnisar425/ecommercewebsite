@@ -11,6 +11,7 @@ function SignUp() {
         <div className="row align-items-center" style={{ height: '100%' }}>
           <div className="col-md-6 d-flex flex-column justify-content-center">
             <form>
+              {/* form is updated */}
               <div className="form-group mb-3">
                 <label htmlFor="fullName">Full Name</label>
                 <input type="text" className="form-control p-3" id="fullName" placeholder="Full Name" />
@@ -19,6 +20,7 @@ function SignUp() {
                 <label htmlFor="emailAddress">Enter Email Address</label>
                 <input type="email" className="form-control p-3" id="emailAddress" placeholder="Email Address" />
               </div>
+              {/* password  */}
               <div className="form-group mb-3">
                 <label htmlFor="password">Password</label> 
                 <input type="password" className="form-control p-3" id="password" placeholder="Password" />
