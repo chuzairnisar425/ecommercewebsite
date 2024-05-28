@@ -1,8 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+// import the app.css file 
 import '../App.css';
 
+
+// login app 
 function Login() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light ">
