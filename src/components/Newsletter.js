@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css'
-const NewsletterSignup = () => {
+const Newsletter = () => {
   return (
 <div className=' bg-black
  text-light'>
@@ -23,4 +23,4 @@ const NewsletterSignup = () => {
   );
 };
 
-export default NewsletterSignup;
+export default Newsletter;

@@ -1,8 +1,8 @@
 import React from 'react';
-
+import '../App.css'
 const Footer = () => {
   return (
-    <div className="p-5 bg-dark text-white py-4">
+    <div className="p-5 bg-black text-white py-4">
       <div className="row">
         <div className="col-md-3">
           <h5>How can we help you?</h5>
@@ -10,7 +10,7 @@ const Footer = () => {
           <form>
             <div className="form-group">
               <label>Receive exclusive promotions, private sales and news</label>
-              <input type="email" className="form-control bg-dark text-light" placeholder="Enter your email" required  />
+              <input type="email" className="form-control w-100 bg-light text-dark" placeholder="Enter your email" required  />
               <button type="submit" className="btn btn-primary mt-2 w-100 bg-light text-dark">Sign up Now!</button>
             </div>
           </form>
