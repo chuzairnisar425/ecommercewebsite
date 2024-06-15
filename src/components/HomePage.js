@@ -327,8 +327,8 @@ function HomePage() {
       </div>
     </div>
 
-<Newsletter/>
         {/* Newsletter */}
+<Newsletter/>
        
       </div>
     </div>
