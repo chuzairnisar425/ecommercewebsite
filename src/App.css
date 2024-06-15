@@ -29,3 +29,6 @@ box-shadow: 2px 2px 2px 4px grey ;
 a{
   text-decoration: none;
 }
+.newsletter{
+  width: 100vw;
+}

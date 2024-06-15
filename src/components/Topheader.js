@@ -7,7 +7,7 @@ const TopHeader = () => {
             <span className="mx-2 ">20% Off + Free Shipping On Your First Order! Details</span>
           </div>
           <div className="col-md-4 d-flex justify-content-end align-items-center">
-            <button className="btn btn-outline-secondary  text-light mr-5"><i className="fas fa-sign-in-alt"></i> Login</button>
+            
             <span className="mr-2">Find stores and services </span>
           
             <span className="mr-2"><i className="fas fa-map-marker-alt"></i> United States</span>

@@ -3,10 +3,7 @@ import React from 'react';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import HomePage from './components/HomePage';
-import TopHeader from './components/Topheader';
-import Header from './components/Header';
-// import Newsletter from './components/Newsletter';
-import Footer from './components/Footer';
+
 
 const App = () => {
   return (
@@ -14,11 +11,10 @@ const App = () => {
     
     // <Router>
       <div>
-        <TopHeader/>
-        <Header/>
+       
         <HomePage/>
         {/* <Newsletter/> */}
-        <Footer/>
+       
         
         {/* Route Definitions */}
         {/* <Routes>

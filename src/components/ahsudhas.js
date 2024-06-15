@@ -1,5 +1,18 @@
-import React, { useState } from 'react';
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
 import './HomePage.css';
+// import images 
 import heroImage from '../Images/heroimage.png';
 import arrival1 from '../Images/arrival1.png';
 import arrival2 from '../Images/arrival2.png';
@@ -14,6 +27,7 @@ import arrival10 from '../Images/arrival10.png';
 import arrival11 from '../Images/arrival11.png';
 import summer1 from '../Images/summer1.png';
 import summer2 from '../Images/summer2.png';
+
 import seller1 from '../Images/seller1.png';
 import seller2 from '../Images/seller2.png';
 import shop1 from '../Images/shop1.png';
@@ -29,66 +43,22 @@ import Footer from './Footer';
 import TopHeader from './Topheader';
 import Header from './Header';
 
+
 function HomePage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [error, setError] = useState('');
-
-  const handleSearch = (searchTerm) => {
-    setSearchTerm(searchTerm); // Update search term state
-  
-    if (!searchTerm.trim()) {
-      setError('Please enter a valid search term.'); // Display error if search term is empty
-      setSearchResults([]); // Clear search results
-    } else {
-      // Simulating search results with a sample data array
-      const sampleData = [
-        { image: arrival1, heading: 'New Arrivals' },
-        { image: arrival2, heading: 'New Arrivals' },
-        { image: arrival3, heading: 'New Arrivals' },
-        { image: arrival4, heading: 'New Arrivals' },
-        { image: arrival5, heading: 'New Arrivals' },
-        { image: arrival6, heading: 'New Arrivals' },
-        { image: arrival7, heading: 'New Arrivals' },
-        { image: arrival8, heading: 'New Arrivals' },
-        { image: arrival9, heading: 'New Arrivals' },
-        { image: arrival10, heading: 'New Arrivals' },
-        { image: arrival11, heading: 'New Arrivals' },
-        { image: summer1, heading: 'Summer Collection' },
-        { image: summer2, heading: 'Summer Collection' },
-        { image: seller1, heading: 'Best Sellers' },
-        { image: seller2, heading: 'Best Sellers' },
-        { image: shop1, heading: 'Shop by Category' },
-        { image: shop2, heading: 'Shop by Category' },
-        { image: shop3, heading: 'Shop by Category' },
-        { image: shop4, heading: 'Shop by Category' },
-        { image: story1, heading: 'Happy Stories' },
-        { image: story2, heading: 'Happy Stories' },
-        { image: story3, heading: 'Happy Stories' }
-      ];
-  
-      const results = sampleData.filter(item => item.heading.toLowerCase().includes(searchTerm.toLowerCase())); // Filtering sample data
-      setSearchResults(results); // Update search results
-      setError(''); // Clear error
-    }
-  };
-  
-
-  // Log search results to console
-  console.log('Search Term:', searchTerm);
-  console.log('Search Results:', searchResults);
-
   return (
+
     <div className="HomePage">
       <TopHeader />
-      <Header onSearch={handleSearch} />
+      <Header />
 
-      <div className="mx-5 mt-4">
+      {/* Main Content */}
+      <div className="mx-5 mt-4 ">
         {/* Hero Section */}
         <div className="row hero-section mb-4">
           <div className="col-md-6 d-flex align-items-center">
             <div className='main-headings'>
               <h1><span className='lets-headings'> LET'S</span> EXPLORE <span className='bg-red text-light'> UNIQUE</span> CLOTHES.</h1>
+
               <p className=' text-start '>Live for Influential and Innovative fashion!</p>
               <button className="btn btn-danger">Shop Now</button>
             </div>
@@ -98,100 +68,67 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Display Error */}
-        {error && <div className="alert alert-danger">{error}</div>}
-
-        {/* Display Search Results */}
-        {searchTerm && searchResults.length === 0 && (
-          <div className="alert alert-warning">No results found for "{searchTerm}". Please try a different search term.</div>
-        )}
-
-       
+        {/* New Arrivals */}
+        <h2 className='text-center'>New Arrivals</h2>
         <div className="row new-arrivals mb-4">
-        {searchResults.length > 0 ? (
-  // Display search results
-  searchResults.map((item, index) => (
-    <div key={index} className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={item.image} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-dark text-light">
-          <h5 className="card-title d-inline">{item.heading}</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-  ))
-) : (
-  // Display default new arrivals
-  <>
-   {/* New Arrivals */}
-   <h2 className='text-center'>New Arrivals</h2>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival1} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-dark text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival2} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-dark text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival3} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-dark text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival4} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-dark text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-    {/* Repeat for other default items */}
-  </>
-)}
-</div>
+          <div className="col-md-3">
+            <div className="card mb-4 position-relative">
+              <img className="card-img-top" src={arrival1} alt="Item" />
+              <span className="position-absolute top-0 end-0 heart-icon">
+                <i className="fas fa-heart"></i>
+              </span>
+              <div className="card-body bg-dark text-light">
+                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+                <i className="fas fa-shopping-cart float-end"></i>
+                <p className="card-text">Co-Ord Sets</p>
+                <p className="card-text text-danger">$.115.00</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div className="card mb-4 position-relative">
+              <img className="card-img-top" src={arrival2} alt="Item" />
+              <span className="position-absolute top-0 end-0 heart-icon">
+                <i className="fas fa-heart"></i>
+              </span>
+              <div className="card-body bg-dark text-light">
+                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+                <i className="fas fa-shopping-cart float-end"></i>
+                <p className="card-text">Co-Ord Sets</p>
+                <p className="card-text text-danger">$.115.00</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div className="card mb-4 position-relative">
+              <img className="card-img-top" src={arrival3} alt="Item" />
+              <span className="position-absolute top-0 end-0 heart-icon">
+                <i className="fas fa-heart"></i>
+              </span>
+              <div className="card-body bg-dark text-light">
+                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+                <i className="fas fa-shopping-cart float-end"></i>
+                <p className="card-text">Co-Ord Sets</p>
+                <p className="card-text text-danger">$.115.00</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div className="card mb-4 position-relative">
+              <img className="card-img-top" src={arrival4} alt="Item" />
 
+              <span className="position-absolute top-0 end-0 heart-icon">
+                <i className="fas fa-heart"></i>
+              </span>
+              <div className="card-body bg-dark text-light">
+                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+                <i className="fas fa-shopping-cart float-end"></i>
+                <p className="card-text">Co-Ord Sets</p>
+                <p className="card-text text-danger">$.115.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Featured Sections */}
         <h2 className='text-center'>View Summer Collection</h2>
@@ -272,7 +209,8 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Favourite Collection */}
+
+        {/* favourite collection  */}
         <div className="grey-section  py-5">
           <div className="container">
             <div className="row align-items-center">
@@ -328,8 +266,7 @@ function HomePage() {
               </span>
               <div className="card-body  bg-dark text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
+                <i className="fas fa-shopping-cart float-end"></i>                <p className="card-text">Co-Ord Sets</p>
                 <p className="card-text text-danger">$.115.00</p>
               </div>
             </div>
@@ -342,15 +279,14 @@ function HomePage() {
               </span>
               <div className="card-body  bg-dark text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
+                <i className="fas fa-shopping-cart float-end"></i>          
+                      <p className="card-text">Co-Ord Sets</p>
                 <p className="card-text text-danger">$.115.00</p>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Shop Category */}
+        {/* Shop Catergory */}
         <h2 className='text-center '>SHOP BY CATEGORY</h2>
         <div className="row">
           <div className="col-md-3 mb-4 position-relative">
@@ -387,7 +323,8 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Happy Stories */}
+        {/* HAPPY STORIES!!? */}
+
         <h2 className='text-center'>HAPPY STORIES!!</h2>
         <div className="row">
           {/* Card 1 */}
@@ -424,12 +361,14 @@ function HomePage() {
           </div>
         </div>
 
+
       </div>
 
       {/* Newsletter */}
       <Newsletter />
       <Footer />
     </div>
+
   );
 }
 

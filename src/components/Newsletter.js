@@ -2,8 +2,7 @@ import React from 'react';
 import '../App.css'
 const Newsletter = () => {
   return (
-<div className=' bg-black
- text-light'>
+<div className='newsletter bg-black text-light'>
 
     <div className="p-5 ">
       <div className="row align-items-center">

@@ -35,3 +35,38 @@
     font-size: 18px;
   }
   
+  /* Header.css */
+
+/* Position the search button inside the input field */
+form.position-relative .search-button {
+  right: 20px;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+/* Adjust the padding of the input field to make room for the search icon */
+.form-control.formBgColor {
+  padding-right: 2.5rem; /* Adjust as needed */
+}
+
+/* Additional styling for the input field */
+.form-control.formBgColor {
+  background-color: #979b9f; /* Example background color */
+  color: #141414;
+}
+
+/* Ensure the input field and button align properly */
+form.position-relative {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}

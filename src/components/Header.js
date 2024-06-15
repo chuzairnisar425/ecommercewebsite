@@ -1,8 +1,20 @@
-// src/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
-function Header() {
+function Header({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Function to handle input change
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value); // Update search term state
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSearch(searchTerm); // Call parent component function to handle search
+  };
+
   return (
     <header>
       <div className="top-bar bg-dark text-white py-1">
@@ -24,24 +36,39 @@ function Header() {
                       </div>
                     </li>
                     <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="/" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       Featured Collection
-                      </a>                    </li>
+                      <a className="nav-link dropdown-toggle" href="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Featured Collection
+                      </a>
+                      {/* Add dropdown menu for featured collection */}
+                    </li>
                     <li className="nav-item">
-                    <a className="nav-link dropdown-toggle" href="/" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       Blog
-                      </a>                    </li>
+                      <a className="nav-link" href="/">
+                        Blog
+                      </a>
+                    </li>
                     <li className="nav-item">
-                    <a className="nav-link dropdown-toggle" href="/" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Sale
-                      </a>                    </li>
+                      <a className="nav-link" href="/">
+                        Sale
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </nav>
             </div>
             <div className="col-md-4 d-flex justify-content-end align-items-center">
-            <button className="btn btn-outline-secondary  text-light mr-5"><i className="fas fa-sign-in-alt"></i> Login</button>          
-                <input type="text" className="form-control formBgColor" placeholder="What are you looking for?"  />
+              <button className="btn btn-outline-secondary text-light mr-5"><i className="fas fa-sign-in-alt"></i> Login</button>
+              <form onSubmit={handleSubmit} className="d-flex align-items-center position-relative">
+                <input
+                  type="text"
+                  className="form-control formBgColor pr-5"
+                  placeholder="What are you looking for?"
+                  value={searchTerm}
+                  onChange={handleInputChange}
+                />
+                <button type="submit" className="btn btn-primary position-absolute search-button">
+                  <i className="fas fa-search"></i>
+                </button>
+              </form>
               <a className="nav-link text-white mx-2" href="/"><i className="fa fa-heart"></i></a>
               <a className="nav-link text-white" href="/"><i className="fa fa-shopping-bag"></i></a>
             </div>
@@ -51,7 +78,7 @@ function Header() {
 
       <div className="banner bg-danger text-white text-center py-4">
         <div className="container">
-          <h1 >GET $50 OFF $150, $75 OFF $200 OR $100 OFF $350+</h1>
+          <h1>GET $50 OFF $150, $75 OFF $200 OR $100 OFF $350+</h1>
           <div className="d-flex justify-content-center mt-2">
             <a className="text-white mx-2" href="/">Shop Men</a>
             <a className="text-white mx-2" href="/">Shop Women</a>
