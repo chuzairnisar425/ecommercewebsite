@@ -1,35 +1,38 @@
 import React from 'react';
-import '../App.css'
+import '../App.css';
+import './Footer.css';
+
 const Footer = () => {
   return (
     <div className="p-5 bg-black text-white py-4">
       <div className="row">
         <div className="col-md-3">
           <h5>How can we help you?</h5>
-          <p>Call us: 988888-34521<br/>Monday-Friday<br/>Email: hunter1132@gmail.com</p>
+          <p>Call us: 988888-34521<br />Monday-Friday<br />Email: hunter1132@gmail.com</p>
           <form>
             <div className="form-group">
               <label>Receive exclusive promotions, private sales and news</label>
-              <input type="email" className="form-control w-100 bg-light text-dark" placeholder="Enter your email" required  />
-              <button type="submit" className="btn btn-primary mt-2 w-100 bg-light text-dark">Sign up Now!</button>
+              <input type="email" className="form-control custom-input " placeholder="Email" required />
+              <button type="submit" className="btn custom-button mt-2">Sign up Now!</button>
             </div>
           </form>
-        </div>
+        </div>  
         <div className="col-md-3">
           <h5>My Account</h5>
-          <ul className="list-unstyled"> 
-      <li className="py-2"><a href="#" className="text-white">Log in</a></li>
-      <li className="py-2"><a href="#" className="text-white">Sign up</a></li>
-      <li className="py-2"><a href="#" className="text-white">Account</a></li>
-      <li className="py-2"><a href="#" className="text-white">Order History</a></li>
-      <li className="py-2"><a href="#" className="text-white">Wishlist</a></li>
-      <li className="py-2"><a href="#" className="text-white">Track your order</a></li>
-    </ul>
+          <ul className="list-unstyled">
+            <li className="py-2"><a href="#" className="text-white">Log in</a></li>
+            <li className="py-2"><a href="#" className="text-white">Sign up</a></li>
+            <li className="py-2"><a href="#" className="text-white">Account</a></li>
+            <li className="py-2"><a href="#" className="text-white">Order History</a></li>
+            <li className="py-2"><a href="#" className="text-white">Wishlist</a></li>
+            <li className="py-2"><a href="#" className="text-white">Track your order</a></li>
+          </ul>
+          <button className="btn btn-danger  mt-3">Follow on Shop</button>
         </div>
         <div className="col-md-3">
           <h5>Information</h5>
           <ul className="list-unstyled">
-          <li className="py-2"><a href="#" className="text-white">About Us</a></li>
+            <li className="py-2"><a href="#" className="text-white">About Us</a></li>
             <li className="py-2"><a href="#" className="text-white">Contact Us</a></li>
             <li className="py-2"><a href="#" className="text-white">Size Guide</a></li>
             <li className="py-2"><a href="#" className="text-white">Careers</a></li>
