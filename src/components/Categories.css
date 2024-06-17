@@ -1,0 +1,54 @@
+
+.nav-pills .nav-link {
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #333;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #212121;
+  }
+  
+  .container .row .col-md-6 span,
+  .container .row .col-md-12 span {
+    color: #fff;
+  }
+  
+  .container .row .col-md-6 select,
+  .container .row .col-md-6 select option {
+    color: #000;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+  
+  .mt-2 {
+    margin-top: .5rem !important;
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #ccc !important;
+  }
+  
+  .pb-2 {
+    padding-bottom: .5rem !important;
+  }
+  
+  .bg-black {
+    background-color: #212121 !important;
+  }
+  .card {
+    max-width: 400px; /* Set a maximum width for each card */
+  }
+  
+  .heart-icon {
+    color: red; /* Adjust the color of the heart icon as needed */
+  }
+  
+  .bg-black {
+    color: white;
+    background-color: #000; /* Ensure the background color of the card body is black */
+  }
+  

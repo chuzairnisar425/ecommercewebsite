@@ -14,11 +14,13 @@
   .custom-button {
     width: 100%;
     padding: 0.5rem;
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 111, 111);
+    color: rgb(211, 115, 115);
     border: none;
     border-radius: 0;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+  a{
+    text-decoration: none;
+  }

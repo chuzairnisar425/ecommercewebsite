@@ -85,14 +85,18 @@ function HomePage() {
 
       <div className="mx-5 mt-4">
         {/* Hero Section */}
-        <div className="row hero-section mb-4">
-          <div className="col-md-6 d-flex align-items-center">
-            <div className='main-headings'>
-              <h1><span className='lets-headings'> LET'S</span> EXPLORE <span className='bg-red text-light'> UNIQUE</span> CLOTHES.</h1>
-              <p className=' text-start '>Live for Influential and Innovative fashion!</p>
-              <button className="btn btn-danger">Shop Now</button>
-            </div>
-          </div>
+        <div className="row hero-section mb-4 ">
+        <div className="col-md-6 d-flex align-items-center justify-content-center">
+  <div className='main-headings text-center'>
+    <h1 className='text-center'>
+      <span className='lets-headings'>LET'S</span> EXPLORE 
+      <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
+    </h1>
+    <p>Live for Influential and Innovative fashion!</p>
+    <button className="btn btn-danger">Shop Now</button>
+  </div>
+</div>
+
           <div className="col-md-6">
             <img src={heroImage} alt="Hero" className="img-fluid" />
           </div>
@@ -117,7 +121,7 @@ function HomePage() {
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>
-        <div className="card-body bg-dark text-light">
+        <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">{item.heading}</h5>
           <i className="fas fa-shopping-cart float-end"></i>
           <p className="card-text">Co-Ord Sets</p>
@@ -131,13 +135,13 @@ function HomePage() {
   <>
    {/* New Arrivals */}
    <h2 className='text-center'>New Arrivals</h2>
-    <div className="col-md-3">
+    <div className="col-md-3 ">
       <div className="card mb-4 position-relative">
         <img className="card-img-top" src={arrival1} alt="Item" />
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>
-        <div className="card-body bg-dark text-light">
+        <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
           <i className="fas fa-shopping-cart float-end"></i>
           <p className="card-text">Co-Ord Sets</p>
@@ -151,7 +155,7 @@ function HomePage() {
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>
-        <div className="card-body bg-dark text-light">
+        <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
           <i className="fas fa-shopping-cart float-end"></i>
           <p className="card-text">Co-Ord Sets</p>
@@ -165,7 +169,7 @@ function HomePage() {
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>
-        <div className="card-body bg-dark text-light">
+        <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
           <i className="fas fa-shopping-cart float-end"></i>
           <p className="card-text">Co-Ord Sets</p>
@@ -179,7 +183,7 @@ function HomePage() {
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>
-        <div className="card-body bg-dark text-light">
+        <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
           <i className="fas fa-shopping-cart float-end"></i>
           <p className="card-text">Co-Ord Sets</p>
@@ -195,7 +199,7 @@ function HomePage() {
 
         {/* Featured Sections */}
         <h2 className='text-center'>View Summer Collection</h2>
-        <div className="row featured-section mb-4">
+        <div className="row featured-section mb-4 bg-black">
           <div className="col-md-6 d-flex align-items-center justify-content-center">
             <img src={summer1} alt="Featured" className="summer1" />
           </div>
@@ -298,7 +302,7 @@ function HomePage() {
               <span className="position-absolute top-0 end-0 heart-icon">
                 <i className="fas fa-heart"></i>
               </span>
-              <div className="card-body  bg-dark text-light">
+              <div className="card-body  bg-black text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
                 <i className="fas fa-shopping-cart float-end"></i>
                 <p className="card-text">Co-Ord Sets</p>
@@ -312,7 +316,7 @@ function HomePage() {
               <span className="position-absolute top-0 end-0 heart-icon">
                 <i className="fas fa-heart"></i>
               </span>
-              <div className="card-body  bg-dark text-light">
+              <div className="card-body  bg-black text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
                 <i className="fas fa-shopping-cart float-end"></i>
                 <p className="card-text">Co-Ord Sets</p>
@@ -326,7 +330,7 @@ function HomePage() {
               <span className="position-absolute top-0 end-0 heart-icon">
                 <i className="fas fa-heart"></i>
               </span>
-              <div className="card-body  bg-dark text-light">
+              <div className="card-body  bg-black text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
                 <i className="fas fa-shopping-cart float-end"></i>
                 <p className="card-text">Co-Ord Sets</p>
@@ -340,7 +344,7 @@ function HomePage() {
               <span className="position-absolute top-0 end-0 heart-icon">
                 <i className="fas fa-heart"></i>
               </span>
-              <div className="card-body  bg-dark text-light">
+              <div className="card-body  bg-black text-light">
                 <h5 className="card-title d-inline">NEW ARRIVALS</h5>
                 <i className="fas fa-shopping-cart float-end"></i>
                 <p className="card-text">Co-Ord Sets</p>
@@ -394,9 +398,9 @@ function HomePage() {
           <div className="col-md-4 mb-4">
             <div className="card">
               <img src={story1} className="card-img-top  img-fluid" alt="Image 2" style={{ maxHeight: '700px' }} />
-              <div className="card-body bg-dark">
+              <div className="card-body bg-black">
                 <p className="card-text text-light">Your Perfect Story with Us!!</p>
-                <button className="btn btn-outline-light  bg-dark">READ MORE</button>
+                <button className="btn btn-outline-light  bg-black">READ MORE</button>
               </div>
             </div>
           </div>
@@ -405,9 +409,9 @@ function HomePage() {
           <div className="col-md-4 mb-4">
             <div className="card">
               <img src={story2} className="card-img-top img-fluid" alt="Image 2" style={{ maxHeight: '700px' }} />
-              <div className="card-body bg-dark">
+              <div className="card-body bg-black">
                 <p className="card-text text-light">Your Perfect Story with Us!!</p>
-                <button className="btn btn-outline-light bg-dark">READ MORE</button>
+                <button className="btn btn-outline-light bg-black">READ MORE</button>
               </div>
             </div>
           </div>
@@ -416,9 +420,9 @@ function HomePage() {
           <div className="col-md-4 mb-4">
             <div className="card">
               <img src={story3} className="card-img-top  img-fluid" alt="Image 2" style={{ maxHeight: '700px' }} />
-              <div className="card-body bg-dark">
+              <div className="card-body bg-black">
                 <p className="card-text text-light">Your Perfect Story with Us!!</p>
-                <button className="btn btn-outline-light  bg-dark">READ MORE</button>
+                <button className="btn btn-outline-light  bg-black">READ MORE</button>
               </div>
             </div>
           </div>

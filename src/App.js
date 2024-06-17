@@ -1,30 +1,23 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
 import HomePage from './components/HomePage';
+import Login from './components/Login';
+import Categories from './components/Categories';
 
 
-const App = () => {
+function App() {
   return (
-
-    
-    // <Router>
-      <div>
-       
-        <HomePage/>
-        {/* <Newsletter/> */}
-       
-        
-        {/* Route Definitions */}
-        {/* <Routes>
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Login />} />
-        </Routes> */}
-      </div>
-    // </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<Categories />} />
+        {/* <Route path="/blog" element={<Blog />} />
+        <Route path="/sale" element={<Sale />} /> */}
+        <Route path="/Login" element={<Login />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
