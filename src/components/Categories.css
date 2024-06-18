@@ -1,12 +1,22 @@
 
 .nav-pills .nav-link {
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    color: #fff;
-    background-color: #333;
-  }
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+.nav-pills .nav-link:hover {
+  color: red;
+}
   
   .nav-pills .nav-link.active {
+    outline: none;
+    font-size: 30px;
+    border: none;
     background-color: #212121;
   }
   

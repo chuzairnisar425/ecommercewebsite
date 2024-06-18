@@ -89,7 +89,9 @@
     text-align: justify;
   }
 
-
+.bg-black{
+  background-color: #131313;
+}
   
   .shop-item {
     position: relative;

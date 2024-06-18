@@ -45,10 +45,84 @@ const Categories = () => {
     <div className='bg-black'>
       <TopHeader />
       {/* Rest of your header and navigation components */}
-
+      <div className="top-bar bg-black text-white py-1">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-8 d-flex align-items-center">
+          <button className="navbar-toggler" type="button">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <nav className="navbar navbar-expand-md navbar-dark">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item dropdown">
+                  <Link className="nav-link dropdown-toggle" to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Categories
+                  </Link>
+                  <div className="dropdown-menu" aria-labelledby="categoriesDropdown">
+                    {/* Add dropdown items here */}
+                  </div>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Featured Collection
+                  </Link>
+                  {/* Add dropdown menu for featured collection */}
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/blog">
+                    Blog
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/sale">
+                    Sale
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div className="col-md-4 d-flex justify-content-end align-items-center">
+          <Link to="/login" className="btn btn-outline-secondary text-light mr-5">
+            <i className="fas fa-sign-in-alt"></i> Login
+          </Link>
+          <form className="d-flex align-items-center position-relative">
+            <input
+              type="text"
+              className="form-control formBgColor pr-5"
+              placeholder="What are you looking for?"
+              
+            />
+            <button type="submit" className="btn btn-primary position-absolute search-button">
+              <i className="fas fa-search"></i>
+            </button>
+          </form>
+          <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
+          <Link className="nav-link text-white" to="/"><i className="fa fa-shopping-bag"></i></Link>
+        </div>
+      </div>
+    </div>
+  </div>
       <div className="mx-2 mt-3">
         {/* Navigation and filter components */}
-
+        <div className="col-md-12">
+    <nav className="nav nav-pills">
+      <Link className="nav-link active readywear" to="#">READY TO WEAR</Link>
+      <Link className="nav-link" to="/ViewAllCategories">View all</Link> {/* Updated here */}
+      <Link className="nav-link" to="#">Tops</Link>
+      <Link className="nav-link" to="#">Outerwear</Link>
+      <Link className="nav-link" to="#">Jackets and Coats</Link>
+      <Link className="nav-link" to="#">Denims</Link>
+      <Link className="nav-link" to="#">T-Shirts & polo shirts</Link>
+      <Link className="nav-link" to="#">Leather Clothing</Link>
+      <Link className="nav-link" to="#">Jeans</Link>
+      <Link className="nav-link" to="#">Suits</Link>
+      <Link className="nav-link" to="#">Trousers</Link>
+      <Link className="nav-link" to="#">Jogging suits</Link>
+    </nav>
+  </div>
+</div>
         {/* Sort by dropdown */}
         <div className="row mt-2">
           <div className="col-md-6">
@@ -305,11 +379,10 @@ const Categories = () => {
           </div>
         </div>
 
+        <Newsletter />
+        <Footer />
       </div>
-
-      <Newsletter />
-      <Footer />
-    </div>
+  
   );
 };
 

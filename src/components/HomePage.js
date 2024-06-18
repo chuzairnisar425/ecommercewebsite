@@ -203,9 +203,9 @@ function HomePage() {
           <div className="col-md-6 d-flex align-items-center justify-content-center">
             <img src={summer1} alt="Featured" className="summer1" />
           </div>
-          <div className="col-md-6 d-flex align-items-center">
-            <div className="text-container">
-              <h3>Lorem Ipsum</h3>
+          <div className="col-md-6  d-flex align-items-center">
+            <div className="text-container bg-black">
+              <h3>Lorem Ipsumad</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
               <button className="btn btn-danger">Shop Now</button>
             </div>
