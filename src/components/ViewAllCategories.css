@@ -1,0 +1,30 @@
+.container-cards {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .left-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; /* Reduced gap between cards */
+  }
+  
+  .left-side .card {
+    width: 70%; /* Ensure cards take full width of their container */
+  }
+  
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; /* Reduced margin between left and right side */
+  }
+  
+  .right-side .card {
+    width: 100%; /* Ensure the right-side card takes full width of its container */
+    /* height: 70%; */
+  }
+  
+
+  

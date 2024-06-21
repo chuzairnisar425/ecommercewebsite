@@ -1,0 +1,39 @@
+/* SignUp.css */
+
+.sign-up-card {
+    width: 1200px; /* Adjust the width as needed */
+  }
+  
+  .sign-up-card .form-control {
+    background-color: #1a1a1a;
+    border: none;
+    color: #fff;
+  }
+  
+  .sign-up-card .form-control::placeholder {
+    color: #888;
+  }
+  
+  .sign-up-card .btn-light {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .sign-up-card .btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+  }
+  
+  .sign-up-card .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .sign-up-card .text-light a {
+    color: #00bfff;
+  }
+  
+  .sign-up-card .text-light a:hover {
+    color: #00aced;
+  }
+  

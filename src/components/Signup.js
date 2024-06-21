@@ -5,24 +5,22 @@ import '../App.css';
 
 function SignUp() {
   return (
-    <div className=" d-flex justify-content-center align-items-center vh-100 bg-black text-light   p-5">
-      <div className="card p-4 bg-black text-white border-light boxshadow" >
-        <h2 className="text-start mb-4 text-light display-3 ">Sign Up</h2>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light mb-5 p-5">
+      <div className=" p-4 bg-black text-white border-light boxshadow">
+        <h2 className="text-start mb-4 text-light">Sign Up</h2>
         <div className="row align-items-center" style={{ height: '100%' }}>
           <div className="col-md-6 d-flex flex-column justify-content-center">
             <form>
-              {/* form is updated */}
               <div className="form-group mb-3">
                 <label htmlFor="fullName">Full Name</label>
                 <input type="text" className="form-control p-3" id="fullName" placeholder="Full Name" />
               </div>
               <div className="form-group mb-3">
-                <label htmlFor="emailAddress">Enter Email Address</label>
+                <label htmlFor="emailAddress">Email Address</label>
                 <input type="email" className="form-control p-3" id="emailAddress" placeholder="Email Address" />
               </div>
-              {/* password  */}
               <div className="form-group mb-3">
-                <label htmlFor="password">Password</label> 
+                <label htmlFor="password">Password</label>
                 <input type="password" className="form-control p-3" id="password" placeholder="Password" />
               </div>
               <div className="form-group mb-4">
@@ -35,7 +33,7 @@ function SignUp() {
             <div>
               <button type="submit" className="btn btn-light w-100 mb-3 p-3">Sign Up</button>
               <div className="text-center mb-3">
-                <span className='text-light'>Already have an account? <Link to="/login" className="text-light">Log in</Link></span>
+                <span className="text-light">Already have an account? <Link to="/login" className="text-light">Log in</Link></span>
               </div>
               <div className="text-center mb-3">Or</div>
             </div>

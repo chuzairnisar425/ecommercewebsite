@@ -1,18 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-// import the app.css file 
 import '../App.css';
 
-
-// login app 
 function Login() {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light ">
-      <div className="card p-4 bg-black boxshadow text-light" style={{ width: '700px' }}>
-        <h2 className="text-start mb-2 display-3 ">Login</h2>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light my-5">
+      <div className="p-4 bg-black boxshadow" style={{ width: '700px' }}>
+        <h2 className="text-start mb-2 text-light">Login</h2>
         <form>
-          <div className="form-group mb-3 ">
+          <div className="form-group mb-3">
             <label htmlFor="email">Email</label>
             <input type="email" className="form-control p-3" id="email" placeholder="Email" />
           </div>
@@ -23,7 +20,7 @@ function Login() {
           <div className="mb-3">
             <a href="#" className="text-light">Forgot Your Password?</a>
             <div className="text-center">
-              <button type="submit" className="btn btn-light button mt-5 p-3">Log in</button>
+              <button type="submit" className="btn btn-light mt-5 p-3">Log in</button>
             </div>
           </div>
         </form>
