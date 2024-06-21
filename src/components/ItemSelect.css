@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .small-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .large-image {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .large-img {
+    width: 70%;
+    height: auto;
+    max-height: 700px; /* Adjust as needed */
+    object-fit: cover;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  

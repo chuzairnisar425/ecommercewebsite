@@ -6,7 +6,7 @@ import './ViewAllCategories.css';
 import arrival5 from '../Images/arrival5.png';
 import arrival6 from '../Images/arrival6.png';
 import arrival7 from '../Images/arrival7.png';
-import arrival8 from '../Images/arrival8.png';
+import arrival1 from '../Images/arrival1.png';
 import shop1 from '../Images/shop1.png';
 import shop2 from '../Images/shop2.png';
 import shop3 from '../Images/shop3.png';
@@ -20,7 +20,7 @@ const ViewAllCategories = () => {
         { id: 1, img: arrival5, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 115.00 },
         { id: 2, img: arrival6, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 150.00 },
         { id: 3, img: arrival7, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 100.00 },
-        { id: 4, img: arrival8, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 120.00 },
+        { id: 4, img: arrival1, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 120.00 },
     ];
 
     const [products, setProducts] = useState(initialProducts);
@@ -176,236 +176,342 @@ const ViewAllCategories = () => {
                
                 </div>
                 <div className="container-cards">
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+                <div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
 </div>
-<div className="container-cards">
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
 </div>
-<div className="container-cards">
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
-      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
 </div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+</div>
 <div className="container-cards">
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
+</div>
+ 
+ 
   <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
-  <div className="col-md-3">
-    <div className="card mb-4 position-relative">
-      <img className="card-img-top" src={arrival8} alt="Item" />
-      <span className="position-absolute top-0 end-0 heart-icon">
-        <i className="fas fa-heart"></i>
-      </span>
-      <div className="card-body bg-black text-light">
-        <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-        <i className="fas fa-shopping-cart float-end"></i>
-        <p className="card-text">Co-Ord Sets</p>
-        <p className="card-text text-danger">$.115.00</p>
+</div>
+
+
+
+
+
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
       </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
     </div>
   </div>
+</div>
+</div>
+<div className="container-cards">
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+</div>
+<div className="container-cards">
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+<div className="col-md-3">
+      <div className="card mb-4 position-relative">
+        <Link to="/ItemSelect">
+          <img className="card-img-top" src={arrival1} alt="Item" style={{ cursor: 'pointer' }} />
+        </Link>
+        <span className="position-absolute top-0 end-0 heart-icon">
+          <i className="fas fa-heart"></i>
+        </span>
+        <div className="card-body bg-black text-light">
+          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+          <div className="icon-container float-end">
+            <div className="small-circle blue"></div>
+            <div className="small-circle pink"></div>
+            <div className="small-circle green"></div>
+            <i className="fas fa-shopping-cart"></i>
+          </div>
+          <p className="card-text">Co-Ord Sets</p>
+          <p className="card-text text-danger">$115.00</p>
+        </div>
+      </div>
+    </div>
 </div>
 
  {/* Shop Category */}
@@ -423,7 +529,7 @@ const ViewAllCategories = () => {
             <div className="card">
               <img src={shop2} className="card-img-top" alt="Image 2" />
               <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
+                <button className="btn btn-danger mb-4 ">WINTER WEAR</button>
               </div>
             </div>
           </div>

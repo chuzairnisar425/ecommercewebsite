@@ -27,4 +27,28 @@
   }
   
 
+  .icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .small-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  .blue {
+    background-color: rgb(84, 84, 239);
+  }
+  
+  .pink {
+    background-color: pink;
+  }
+  
+  .green {
+    background-color: green;
+  }
   

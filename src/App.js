@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Categories from './components/Categories';
 import ViewAllCategories from './components/ViewAllCategories';
+import ItemSelect from './components/ItemSelect';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/sale" element={<Sale />} /> */}
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
+        <Route path="/ItemSelect" element={<ItemSelect />} />
       </Routes>
     </Router>
   );
