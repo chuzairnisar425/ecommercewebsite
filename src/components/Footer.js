@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+// import '../App.css';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,14 +13,14 @@ const Footer = () => {
             <div className="form-group">
               <label>Receive exclusive promotions, private sales and news</label>
               <input type="email" className="form-control custom-input " placeholder="Email" required />
-              <button type="submit" className="btn custom-button mt-2">Sign up Now!</button>
+              <button type="submit" className="signupbtn  mt-2">Sign up Now!</button>
             </div>
           </form>
         </div>  
         <div className="col-md-3">
           <h5>My Account</h5>
           <ul className="list-unstyled">
-            <li className="py-2"><a href="#" className="text-white">Log in</a></li>
+            <li className="py-2"><a href="#" className="text-white ">Log in</a></li>
             <li className="py-2"><a href="#" className="text-white">Sign up</a></li>
             <li className="py-2"><a href="#" className="text-white">Account</a></li>
             <li className="py-2"><a href="#" className="text-white">Order History</a></li>

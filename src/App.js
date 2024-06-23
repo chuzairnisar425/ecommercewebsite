@@ -7,6 +7,8 @@ import Signup from './components/Signup';
 import Categories from './components/Categories';
 import ViewAllCategories from './components/ViewAllCategories';
 import ItemSelect from './components/ItemSelect';
+import EmptyCard from './components/EmptyCard';
+import AddItem from './components/AddItem';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/ItemSelect" element={<ItemSelect />} />
+        <Route path="/EmptyCard" element={<EmptyCard />} />
+        <Route path="/AddItem" element={<AddItem />} />
       </Routes>
     </Router>
   );

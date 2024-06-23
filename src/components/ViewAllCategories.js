@@ -94,8 +94,8 @@ const ViewAllCategories = () => {
                                 </button>
                             </form>
                             <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
-                            <Link className="nav-link text-white" to="/"><i className="fa fa-shopping-bag"></i></Link>
-                        </div>
+                            <Link  className="nav-link text-white mr-2" to="/EmptyCard"><i className="fa fa-shopping-bag"></i></Link>
+                            </div>
                     </div>
                 </div>
             </div>

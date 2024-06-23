@@ -20,7 +20,7 @@ function Header({ onSearch }) {
   return (
     <header>
       <div className="top-bar bg-dark text-white py-1">
-        <div className="container">
+        <div className="">
           <div className="row">
             <div className="col-md-8 d-flex align-items-center">
               <button className="navbar-toggler" type="button">
@@ -74,14 +74,14 @@ function Header({ onSearch }) {
                 </button>
               </form>
               <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
-              <Link className="nav-link text-white" to="/"><i className="fa fa-shopping-bag"></i></Link>
+              <Link  className="nav-link text-white mr-2" to="/EmptyCard"><i className="fa fa-shopping-bag"></i></Link>
             </div>
           </div>
         </div>
       </div>
 
       <div className="banner bg-danger text-white text-center py-4">
-        <div className="container">
+        <div className="">
           <h1>GET $50 OFF $150, $75 OFF $200 OR $100 OFF $350+</h1>
           <div className="d-flex justify-content-center mt-2">
             <Link className="text-white mx-2" to="/">Shop Men</Link>

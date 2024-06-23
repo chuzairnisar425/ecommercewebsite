@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import TopHeader from './Topheader';
-import { Link } from 'react-router-dom';
-import '../App.css'
-import './ItemSelect.css'
-import arrival5 from '../Images/arrival5.png';
-import arrival6 from '../Images/arrival6.png';
-import arrival7 from '../Images/arrival7.png';
-import arrival1 from '../Images/arrival1.png';
-import shop1 from '../Images/shop1.png';
-import shop2 from '../Images/shop2.png';
-import shop3 from '../Images/shop3.png';
-import shop4 from '../Images/shop4.png';
-import bigImage from '../Images/bigImage.png'; 
-import Newsletter from './Newsletter';
-import Footer from './Footer';
+  import React, { useState } from 'react';
+  import TopHeader from './Topheader';
+  import { Link } from 'react-router-dom';
+  import '../App.css'
+  import './ItemSelect.css'
+  import arrival5 from '../Images/arrival5.png';
+  import arrival6 from '../Images/arrival6.png';
+  import arrival7 from '../Images/arrival7.png';
+  import arrival1 from '../Images/arrival1.png';
+  import like1 from '../Images/like1.png';
+  import like2 from '../Images/like2.png';
+  import like3 from '../Images/like3.png';
+  import like4 from '../Images/like4.png';
+
+  import Newsletter from './Newsletter';
+  import Footer from './Footer';
 
 const ItemSelect = () => {
     const initialProducts = [
@@ -94,8 +94,8 @@ const ItemSelect = () => {
                                 </button>
                             </form>
                             <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
-                            <Link className="nav-link text-white" to="/"><i className="fa fa-shopping-bag"></i></Link>
-                        </div>
+                            <Link  className="nav-link text-white mr-2" to="/EmptyCard"><i className="fa fa-shopping-bag"></i></Link>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -143,27 +143,14 @@ const ItemSelect = () => {
                         <span className="text-white">{products.length} Products</span>
                     </div>
                 </div>
-                <div className="container-cards">
-                    <div className="left-side">
-                        {products.map((product) => (
-                            <div className="card mb-4 position-relative" key={product.id}>
-                                <img className="card-img-top" src={product.img} alt="Item" />
-                                <span className="position-absolute top-0 end-0 heart-icon">
-                                    <i className="fas fa-heart"></i>
-                                </span>
-                                <div className="card-body bg-black text-light">
-                                    <h5 className="card-title d-inline">{product.title}</h5>
-                                    <i className="fas fa-shopping-cart float-end"></i>
-                                    <p className="card-text">{product.description}</p>
-                                    <p className="card-text text-danger">${product.price.toFixed(2)}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    </div>
+            
 
 
-                    <div className="container">
+                    <div className="container1">
+                    <div className="row ">
+        {/* First Div with four small images */}
+        <div className="col-md-2">
+                      
       {/* First Div with four small images */}
       <div className="small-images">
         <img src={arrival1} alt="Small 1" className="small-img" />
@@ -171,18 +158,301 @@ const ItemSelect = () => {
         <img src={arrival1} alt="Small 3" className="small-img" />
         <img src={arrival1} alt="Small 4" className="small-img" />
       </div>
+      </div>
 
       {/* Second Div with one larger image */}
-      <div className="large-image">
+      <div className="col-md-6 ">
+      <div className="large-image ">
         <img src={arrival1} alt="Large" className="large-img" />
+      </div>
       </div>
 
       {/* Third Div with content */}
+      <div className="col-md-4">
       <div className="content">
-        <h1>Content Title</h1>
-        <p>This is some content that goes in the third div.</p>
-      </div>
+                        <h1>105 REGULAR FIT JEANS</h1>
+                        <div className="rating">
+                            ★★★★★ (0 reviews)
+                        </div>
+                        <p className="price text-danger">$69.50 <span> or 4 installments of $17.38</span></p>
+                        <div className="colors">
+                            <span>Back To You - Medium Wash Stretch </span>
+                            <br/>
+                            <div className="color-swatch" style={{ backgroundColor: 'pink' }}></div>
+                            <div className="color-swatch" style={{ backgroundColor: 'blue' }}></div>
+                            <div className="color-swatch" style={{ backgroundColor: 'green' }}></div>
+                            <div className="color-swatch" style={{ backgroundColor: 'red' }}></div>
+                        </div>
+                        <div className="sizes">
+                            <span>Size: </span>
+                            <br/>
+                            <button className="size-button">S</button>
+                            <button className="size-button">M</button>
+                            <button className="size-button">L</button>
+                        </div>
+                        <div className="waist">
+                            <span>Waist: </span>
+                            <br/>
+                            {['30', '31', '32', '33', '34', '35', '36', '38', '40'].map(size => (
+                                <button className="waist-button" key={size}>{size}</button>
+                            ))}
+                        </div>
+                        <div className="length">
+                            <span>Length: </span>
+                            <br/>
+                            {['29', '30', '32', '34', '36'].map(length => (
+                                <button className="length-button" key={length}>{length}</button>
+                            ))}
+                        </div>
+                        <div className="quantity">
+                            <span>Select Quantity: </span>
+                            <br/>
+                            <button className="quantity-button">-</button>
+                            <span className="quantity-number">1</span>
+                            <button className="quantity-button">+</button>
+                        </div>
+                        <div className="pickup-ship">
+                            <button className="pickup-button">Pickup In-Store 
+                            <br/>
+                                <span>Select size to see if item is in 
+                                stock </span>
+                            </button>
+                            <button className="ship-button">Ship
+                            <br/>
+                                <span>Select size to see if item is in 
+                                stock </span>
+                            </button>
+                        </div>
+                        <div className="actions">
+                            <p>Select your store</p>
+                     
+                            <button className="add-to-cart w-100 mb-3">ADD TO CART</button>
+                        <br/>
+                            <button className="buy-now w-100">BUY IT NOW</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+  
+
+
+                <div className="container-fluid">
+    <div className="row">
+        {/* <!-- First Column: Product Description -->  */}
+        
+        <div className="col-md-6">
+            <div className="product-description">
+                <h1>Lorem Ipsum</h1>
+                <p className='text-secondary'>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore  dolore Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore  dolore Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore  dolore</p>
+                <button className="shop-now">SHOP NOW</button>
+            </div>
+        </div>
+        {/* <!-- Second Column: Product Details --> */}
+        <div className="col-md-6">
+            <div className="product-details">
+                <h2>How it Fits:</h2>
+                <p> <strong>Leg Opening:</strong> Straight</p>
+                <div className="fit-chart">
+                    <span>Super Skinny</span>
+                    <span>Wide Leg</span>
+                </div>
+                <p> <strong>Stretch:</strong> Low Stretch: </p>
+                <div className="stretch-chart">
+                    <span>No Stretch</span>
+                    <span>High Stretch</span>
+                </div>
+                <ul >
+                    <li>Regular Through The Thigh</li>
+                    <li>Sits at your waist</li>
+                    <li>Straight leg</li>
+                    <li>Front rise: 11 1/4", Knee: 18", Leg opening 16"</li>
+                    <li>Measurements based on size 32</li>
+                    <li>Model is 6'3" with a 32" waist. They're wearing a size 32x32.</li>
+                </ul>
+                <h2>Composition & Care</h2>
+                <ul>
+                    <li>99% cotton, 1% elastane</li>
+                    <li>Denim</li>
+                    <li>Stretch</li>
+                    <li>Zip fly</li>
+                    <li>5-pocket styling</li>
+                    <li>Recycled cotton</li>
+                    <li>Machine wash cold, normal cycle. Wash inside out with like colors, do not bleach, tumble dry medium, warm iron, dry clean possible.</li>
+                    <li>Imported</li>
+                </ul>
+            </div>
+        </div>
     </div>
+</div>
+
+
+
+<div className="container-cards">
+                <div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2 className='text-center'>YOU MAY ALSO LIKE</h2>
+<div className='container-cards'>
+
+<br/>
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={like1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={like2} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={like3} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={like4} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+        <i className="fas fa-shopping-cart"></i>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
 
 
                     </div>
