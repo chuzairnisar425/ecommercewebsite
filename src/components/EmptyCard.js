@@ -7,10 +7,7 @@ import arrival5 from '../Images/arrival5.png';
 import arrival6 from '../Images/arrival6.png';
 import arrival7 from '../Images/arrival7.png';
 import arrival1 from '../Images/arrival1.png';
-import like1 from '../Images/like1.png';
-import like2 from '../Images/like2.png';
-import like3 from '../Images/like3.png';
-import like4 from '../Images/like4.png';
+
 import { FaShoppingCart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';

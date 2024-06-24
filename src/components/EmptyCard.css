@@ -88,3 +88,45 @@
     width: 30px;
     text-align: center;
   }
+
+
+  .form-control.no-bg {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: rgb(199, 177, 177);
+    border-radius: 0;
+  }
+  
+  .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
+  
+  .dropdown-wrapper {
+    position: relative;
+  }
+  
+  .dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .border-bottom-item {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-content {
+    padding: 10px 0;
+  }
