@@ -1,0 +1,26 @@
+/* Navbar.css */
+
+.cart-dropdown {
+    z-index: 1000;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .cart-dropdown img {
+    width: 40%;
+    height: auto;
+  }
+  
+  .cart-dropdown .fa-shopping-bag {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+  
+  .cart-dropdown h5 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .signupclr{
+    color:black;
+    font-weight: bold;
+  }

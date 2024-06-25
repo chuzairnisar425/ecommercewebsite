@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TopHeader from './Topheader';
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import './Categories.css';
 import arrival5 from '../Images/arrival5.png';
@@ -16,94 +17,44 @@ import Footer from './Footer';
 
 const Categories = () => {
   const initialProducts = [
-    { id: 1, img: arrival5, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 115.00 },
-    { id: 2, img: arrival6, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 150.00 },
-    { id: 3, img: arrival7, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 100.00 },
+    { id: 1, img: arrival5, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 115.00, rating: 4.5, sales: 100, recommendation: 1 },
+    { id: 2, img: arrival6, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 150.00, rating: 4.7, sales: 200, recommendation: 3 },
+    { id: 3, img: arrival7, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 100.00, rating: 4.2, sales: 150, recommendation: 2 },
     // Add more products as needed
   ];
+  
 
   const [products, setProducts] = useState(initialProducts);
-  const [sortOption, setSortOption] = useState('');
+  const [sortOption, setSortOption] = useState('Recommended');
 
-  const handleSortChange = (event) => {
-    const option = event.target.value;
-    setSortOption(option);
+const handleSortChange = (event) => {
+  const option = event.target.value;
+  setSortOption(option);
 
-    let sortedProducts = [...products];
-    if (option === 'Price, high to low') {
-      sortedProducts.sort((a, b) => b.price - a.price);
-    } else if (option === 'Price, low to high') {
-      sortedProducts.sort((a, b) => a.price - b.price);
-    } else if (option === 'Newest') {
-      // Assuming initialProducts is already sorted from newest to oldest
-      sortedProducts = initialProducts;
-    }
-    setProducts(sortedProducts);
-  };
+  let sortedProducts = [...products];
+  if (option === 'Price, high to low') {
+    sortedProducts.sort((a, b) => b.price - a.price);
+  } else if (option === 'Price, low to high') {
+    sortedProducts.sort((a, b) => a.price - b.price);
+  } else if (option === 'Newest') {
+    // Assuming initialProducts is already sorted from newest to oldest
+    sortedProducts = initialProducts;
+  } else if (option === 'Top Rated') {
+    sortedProducts.sort((a, b) => b.rating - a.rating);
+  } else if (option === 'Best Sellers') {
+    sortedProducts.sort((a, b) => b.sales - a.sales);
+  } else if (option === 'Recommended') {
+    sortedProducts.sort((a, b) => a.recommendation - b.recommendation);
+  }
+  setProducts(sortedProducts);
+};
+
 
   return (
     <div className='bg-black'>
       <TopHeader />
       {/* Rest of your header and navigation components */}
-      <div className="top-bar bg-black text-white py-1">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 d-flex align-items-center">
-          <button className="navbar-toggler" type="button">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <nav className="navbar navbar-expand-md navbar-dark">
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item dropdown">
-                  <Link className="nav-link dropdown-toggle" to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All Categories
-                  </Link>
-                  <div className="dropdown-menu" aria-labelledby="categoriesDropdown">
-                    {/* Add dropdown items here */}
-                  </div>
-                </li>
-                <li className="nav-item dropdown">
-                  <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Featured Collection
-                  </Link>
-                  {/* Add dropdown menu for featured collection */}
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/blog">
-                    Blog
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/sale">
-                    Sale
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <div className="col-md-4 d-flex justify-content-end align-items-center">
-          <Link to="/login" className="btn btn-outline-secondary text-light mr-5">
-            <i className="fas fa-sign-in-alt"></i> Login
-          </Link>
-          <form className="d-flex align-items-center position-relative">
-            <input
-              type="text"
-              className="form-control formBgColor pr-5"
-              placeholder="What are you looking for?"
-              
-            />
-            <button type="submit" className="btn btn-primary position-absolute search-button">
-              <i className="fas fa-search"></i>
-            </button>
-          </form>
-          <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
-          <Link className="nav-link text-white" to="/"><i className="fa fa-shopping-bag"></i></Link>
-        </div>
-      </div>
-    </div>
-  </div>
+    <Navbar/>
       <div className="mx-2 mt-3">
         {/* Navigation and filter components */}
         <div className="col-md-12">
@@ -126,7 +77,7 @@ const Categories = () => {
         {/* Sort by dropdown */}
         <div className="row mt-2">
           <div className="col-md-6">
-            <span className="text-white">Filter:</span>
+            <span className="text-white ml-4">Filter:</span>
             <select className="form-control d-inline-block w-auto ml-2">
               <option>Availability</option>
               {/* Add your filter options here */}
@@ -139,9 +90,12 @@ const Categories = () => {
               value={sortOption}
               onChange={handleSortChange}
             >
-              <option>Price, high to low</option>
+              <option>Recommended</option>
+              <option>Best Sellers</option>
+              <option>Latest Arrival</option>
               <option>Price, low to high</option>
-              <option>Newest</option>
+              <option>Price, high to low</option>
+                <option>Top Rated</option>
               {/* Add more sort options if needed */}
             </select>
           </div>
