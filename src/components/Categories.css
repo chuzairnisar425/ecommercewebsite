@@ -61,4 +61,76 @@
     color: white;
     background-color: #000; /* Ensure the background color of the card body is black */
   }
-  
+/* Categories.css */
+.filter-container {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-popup {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 300px;
+}
+
+.filter-container:hover .filter-popup {
+  display: block;
+}
+
+.filter-heading {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.color-label {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.show-more-btn {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  color: blue;
+}
+
+.size-options,
+.material-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.size-option,
+.material-option {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

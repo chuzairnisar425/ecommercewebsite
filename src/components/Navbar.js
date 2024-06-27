@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import arrival1 from '../Images/arrival1.png';
-
 import './Navbar.css'; // Custom styles if needed
 
 const Navbar = () => {
@@ -28,7 +27,7 @@ const Navbar = () => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
-                    <Link className="nav-link dropdown-toggle" to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <Link className="nav-link " to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       All Categories
                     </Link>
                     <div className="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -46,10 +45,50 @@ const Navbar = () => {
                       Blog
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/sale">
+                  <li className="nav-item dropdown">
+                    <Link className="nav-link dropdown-toggle" to="/sale" id="saleDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Sale
                     </Link>
+                    <div className="dropdown-menu p-3" aria-labelledby="saleDropdown">
+                      <div className="row">
+                        <div className="col-md-4">
+                          <h6>Sale</h6>
+                          <Link className="dropdown-item" to="/sale/mens">Shop All Men's Sale</Link>
+                          <Link className="dropdown-item" to="/sale/jeans">Jeans</Link>
+                          <Link className="dropdown-item" to="/sale/shirts">Shirts & T-Shirts</Link>
+                          <Link className="dropdown-item" to="/sale/pants">Pants & Chinos</Link>
+                          <Link className="dropdown-item" to="/sale/jackets">Jean Jackets & Outerwear</Link>
+                          <Link className="dropdown-item" to="/sale/sweaters">Sweaters & Sweatshirts</Link>
+                          <Link className="dropdown-item" to="/sale/shorts">Shorts</Link>
+                          <Link className="dropdown-item" to="/sale/cargos">Cargos</Link>
+                          <Link className="dropdown-item" to="/sale/big-tall">Big & Tall</Link>
+                        </div>
+                        <div className="col-md-4 mr-5">
+                          <h6>Sale</h6>
+                          <Link className="dropdown-item" to="/sale/mens">Shop All Men's Sale</Link>
+                          <Link className="dropdown-item" to="/sale/jeans">Jeans</Link>
+                          <Link className="dropdown-item" to="/sale/shirts">Shirts & T-Shirts</Link>
+                          <Link className="dropdown-item" to="/sale/pants">Pants & Chinos</Link>
+                          <Link className="dropdown-item" to="/sale/jackets">Jean Jackets & Outerwear</Link>
+                          <Link className="dropdown-item" to="/sale/sweaters">Sweaters & Sweatshirts</Link>
+                          <Link className="dropdown-item" to="/sale/shorts">Shorts</Link>
+                          <Link className="dropdown-item" to="/sale/cargos">Cargos</Link>
+                          <Link className="dropdown-item" to="/sale/big-tall">Big & Tall</Link>
+                        </div>
+                        <div className="col-md-4">
+                          <h6>Sale</h6>
+                          <Link className="dropdown-item" to="/sale/mens">Shop All Men's Sale</Link>
+                          <Link className="dropdown-item" to="/sale/jeans">Jeans</Link>
+                          <Link className="dropdown-item" to="/sale/shirts">Shirts & T-Shirts</Link>
+                          <Link className="dropdown-item" to="/sale/pants">Pants & Chinos</Link>
+                          <Link className="dropdown-item" to="/sale/jackets">Jean Jackets & Outerwear</Link>
+                          <Link className="dropdown-item" to="/sale/sweaters">Sweaters & Sweatshirts</Link>
+                          <Link className="dropdown-item" to="/sale/shorts">Shorts</Link>
+                          <Link className="dropdown-item" to="/sale/cargos">Cargos</Link>
+                          <Link className="dropdown-item" to="/sale/big-tall">Big & Tall</Link>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
