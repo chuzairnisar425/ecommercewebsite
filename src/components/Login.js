@@ -5,7 +5,7 @@ import '../App.css';
 
 function Login() {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light my-5">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light ">
       <div className="p-4 bg-black boxshadow" style={{ width: '700px' }}>
         <h2 className="text-start mb-2 text-light">Login</h2>
         <form>

@@ -5,7 +5,7 @@ import '../App.css';
 
 function SignUp() {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light mb-5 p-5">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light  p-5">
       <div className=" p-4 bg-black text-white border-light boxshadow">
         <h2 className="text-start mb-4 text-light">Sign Up</h2>
         <div className="row align-items-center" style={{ height: '100%' }}>
