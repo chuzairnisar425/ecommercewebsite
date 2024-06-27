@@ -27,12 +27,10 @@ const Navbar = () => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
-                    <Link className="nav-link " to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <Link className="nav-link " to="/categories"  role="button"  aria-haspopup="true" aria-expanded="false">
                       All Categories
                     </Link>
-                    <div className="dropdown-menu" aria-labelledby="categoriesDropdown">
-                      {/* Add dropdown items here */}
-                    </div>
+                   
                   </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -114,7 +112,7 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave}
             >
-              <i className="fa fa-shopping-bag"></i> {cartItemCount}
+              <i className="fa fa-shopping-bag"></i>
               {isCartVisible && (
                 <div className="cart-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px'}}>
                   <div className="d-flex flex-column align-items-start">

@@ -83,11 +83,11 @@ function HomePage() {
       <TopHeader />
       <Header onSearch={handleSearch} />
 
-      <div className="mx-5 mt-4">
+      <div className="">
         {/* Hero Section */}
         <div className="row hero-section mb-4 ">
         <div className="col-md-6 d-flex align-items-center justify-content-center">
-  <div className='main-headings text-center'>
+  <div className='main-headings '>
     <h1 className='text-center'>
       <span className='lets-headings'>LET'S</span> EXPLORE 
       <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
