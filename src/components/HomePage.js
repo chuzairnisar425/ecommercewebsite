@@ -113,7 +113,7 @@ function HomePage() {
        
         <div className="row new-arrivals mb-4">
         {searchResults.length > 0 ? (
-  // Display search results
+  // Display search results in browser
   searchResults.map((item, index) => (
     <div key={index} className="col-md-3">
       <div className="card mb-4 position-relative">
