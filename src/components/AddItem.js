@@ -15,7 +15,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Newsletter from './Newsletter';
 import Footer from './Footer';
 const AddItem = () => {
-
+// inital products
     const initialProducts = [
         { id: 1, img: arrival5, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 115.00 },
         { id: 2, img: arrival6, title: 'NEW ARRIVALS', description: 'Co-Ord Sets', price: 150.00 },
