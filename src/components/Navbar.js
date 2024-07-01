@@ -5,14 +5,23 @@ import './Navbar.css'; // Custom styles if needed
 
 const Navbar = () => {
   const [isCartVisible, setCartVisible] = useState(false);
+  const [isWishlistVisible, setWishlistVisible] = useState(false);
   const cartItemCount = 3; // Example item count
 
-  const handleMouseEnter = () => {
+  const handleCartMouseEnter = () => {
     setCartVisible(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleCartMouseLeave = () => {
     setCartVisible(false);
+  };
+
+  const handleWishlistMouseEnter = () => {
+    setWishlistVisible(true);
+  };
+
+  const handleWishlistMouseLeave = () => {
+    setWishlistVisible(false);
   };
 
   return (
@@ -27,10 +36,9 @@ const Navbar = () => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
-                    <Link className="nav-link " to="/categories"  role="button"  aria-haspopup="true" aria-expanded="false">
+                    <Link className="nav-link " to="/categories" role="button" aria-haspopup="true" aria-expanded="false">
                       All Categories
                     </Link>
-                   
                   </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -106,11 +114,22 @@ const Navbar = () => {
                 <i className="fas fa-search"></i>
               </button>
             </form>
-            <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
+            <div 
+              className="nav-link text-white mx-2 position-relative"
+              onMouseEnter={handleWishlistMouseEnter}
+              onMouseLeave={handleWishlistMouseLeave}
+            >
+              <i className="fa fa-heart"></i>
+              {isWishlistVisible && (
+                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px', zIndex:1000}}>
+                  <Wishlist />
+                </div>
+              )}
+            </div>
             <div 
               className="nav-link text-white position-relative" 
-              onMouseEnter={handleMouseEnter} 
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleCartMouseEnter} 
+              onMouseLeave={handleCartMouseLeave}
             >
               <i className="fa fa-shopping-bag"></i>
               {isCartVisible && (
@@ -140,6 +159,52 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Wishlist = () => {
+  return (
+    <div className="d-flex flex-column align-items-center mt-3">
+      <h1 className="text-center">Company’s Name</h1>
+      <h2 className="text-center mt-3">Welcome back</h2>
+      <p className="text-center">Log in for faster checkout and see all your benefits.</p>
+      <div className="container-transition hover-animation w-100" style={{ maxWidth: "400px" }}>
+        <form>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Password"
+            />
+            <small className="form-text text-muted">
+              <a href="#" className="text-decoration-none">Forgot Password</a>
+            </small>
+          </div>
+          <button type="submit" className="btn btn-secondary btn-block">Log In</button>
+        </form>
+        <div className="text-center mt-3">
+          <a href="#" className="text-decoration-none">Create a new account</a>
+        </div>
+        <div className="text-center my-3">
+          <p>OR</p>
+        </div>
+        <button className="btn btn-secondary btn-block">Use a One-Time Passcode</button>
+      </div>
+      <p className="text-center mt-3" style={{ fontSize: "0.75rem" }}>
+        By logging in, I agree to the Company's Terms, Terms of Use, and the Red Tab Program Conditions. I have read the Company's Privacy Policy.
+      </p>
     </div>
   );
 };

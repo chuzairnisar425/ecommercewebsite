@@ -73,3 +73,25 @@
 .navbar-nav .dropdown-menu .col-md-4:last-child {
   margin-right: 0;
 }
+
+.hover-animation input:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hover-animation button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-transition {
+  transition: width 0.3s ease;
+}
+
+.container-transition:hover {
+  width: 380px;
+}
+
+
