@@ -3,14 +3,12 @@ import TopHeader from './Topheader';
 import { Link } from 'react-router-dom';
 import '../App.css'
 import './EmptyCard.css'
+import './AddItem.css'
 import arrival5 from '../Images/arrival5.png';
 import arrival6 from '../Images/arrival6.png';
 import arrival7 from '../Images/arrival7.png';
 import arrival1 from '../Images/arrival1.png';
-
-import { FaShoppingCart } from 'react-icons/fa';
-import { FaHeart } from 'react-icons/fa';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaShoppingCart, FaHeart, FaChevronDown, FaChevronUp, FaCreditCard, FaPaypal, FaUniversity } from 'react-icons/fa';
 
 import Newsletter from './Newsletter';
 import Footer from './Footer';
@@ -69,6 +67,39 @@ const AddItem = () => {
 
 
 
+  // Payment popup functionality
+  const [showPaymentPopup, setShowPaymentPopup] = useState(false);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
+
+  const handlePaymentPopup = () => {
+      setShowPaymentPopup(!showPaymentPopup);
+  };
+
+  const handlePaymentMethodChange = (method) => {
+      setSelectedPaymentMethod(method);
+  };
+
+  const handleSaveDetails = () => {
+      if (!selectedPaymentMethod) {
+          alert('Please select a payment method before saving.');
+      } else {
+          alert(`You have selected ${selectedPaymentMethod} method.`);
+          setShowPaymentPopup(false);
+      }
+  };
+
+
+
+    // Checkout popup functionality
+    const [showCheckoutPopup, setShowCheckoutPopup] = useState(false);
+
+    const handleCheckoutPopup = () => {
+        setShowCheckoutPopup(!showCheckoutPopup);
+    };
+
+    const handleClosePopup = () => {
+        setShowCheckoutPopup(false); // Updated to close checkout popup
+    };
 
   return (
     <div className='bg-black'>
@@ -249,8 +280,8 @@ const AddItem = () => {
 </div>
 
             <div className="d-flex mt-3">
-              <button className="btn btn-light mr-3 w-50">Payment Method</button>
-              <button className="btn btn-light w-50">Checkout</button>
+            <button className="btn btn-light mr-3 w-50" onClick={handlePaymentPopup}>Payment Method</button>
+              <button className="btn btn-light w-50" onClick={handleCheckoutPopup}>Checkout</button>
             </div>
            
           </div>
@@ -298,6 +329,109 @@ const AddItem = () => {
       )}
     </div>
     </div>
+
+
+
+  {/* Checkout popup */}
+  {showCheckoutPopup && (
+                <div className="checkout-popup">
+                    <div className="checkout-popup-content">
+                    <button className="btn btn-light close-btn" onClick={handleClosePopup}>
+                    <i className="fas fa-times"></i>
+                </button>
+                        <div className="row">
+                            <div className="col-md-6">
+                                {/* Left div */}
+                                <div className="text-center">
+                                    <h2>GUEST CUSTOMERS</h2>
+                                    <p>Check out without an account</p>
+                                    <button className="btn btn-light">CHECK OUT AS GUEST</button>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                {/* Right div */}
+                                <div className="text-center">
+                                    <p>Log in for faster checkout and see all your benefits.</p>
+                                    <div className="form-group">
+                                        <input type="email" className="form-control" placeholder="Email" />
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="password" className="form-control" placeholder="Password" />
+                                        <small><Link to="/forgot-password">Forgot password?</Link></small>
+                                    </div>
+                                    <button className="btn btn-danger">Login</button>
+                                    <p>or</p>
+                                    <Link to="/signup">Create a new account</Link>
+                                    <p><strong>OR</strong></p>
+                                    <button className="btn btn-light">Use a One-Time Passcode</button>
+                                    <p>By logging in, I agree to the Company's <Link to="/terms-of-use">Terms of Use</Link> and the Red Program Conditions. I have read the <Link to="/privacy-policy">Privacy Policy</Link>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
+    
+{/* payment method  */}
+    {showPaymentPopup && (
+              <div className="payment-popup">
+              <div className="payment-popup-content">
+                  <h2>Payment Method</h2>
+                  <div className="form-group">
+                      <label>Country or Region</label>
+                      <input type="text" className="form-control" />
+                  </div>
+                  <div className="form-group">
+                      <label>Address Line 1</label>
+                      <input type="text" className="form-control" />
+                  </div>
+                  <h3>Payment</h3>
+                  <div className="payment-options">
+                      <div className={`payment-option ${selectedPaymentMethod === 'Card Payment' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('Card Payment')}>
+                          <FaCreditCard />
+                          <span>Card Payment</span>
+                      </div>
+                      <div className={`payment-option ${selectedPaymentMethod === 'PayPal' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('PayPal')}>
+                          <FaPaypal />
+                          <span>PayPal</span>
+                      </div>
+                      <div className={`payment-option ${selectedPaymentMethod === 'Bank Payment' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('Bank Payment')}>
+                          <FaUniversity />
+                          <span>Bank Payment</span>
+                      </div>
+                  </div>
+                  <div className="form-group">
+                      <label>Card Number</label>
+                      <input type="number" className="form-control" />
+                  </div>
+                  <div className="form-row">
+                      <div className="form-group col-md-6">
+                          <label>Expiry Date</label>
+                          <input type="date" className="form-control" />
+                      </div>
+                      <div className="form-group col-md-6">
+                          <label>CVC</label>
+                          <input type="text" className="form-control" />
+                      </div>
+                  </div>
+                  <div className="form-check">
+                      <input type="checkbox" className="form-check-input" />
+                      <label className="form-check-label">Billing is the same as shipping information</label>
+                  </div>
+                  <p>
+                      By providing your card information, you allow Name Shop to charge your card for future payments
+                      in accordance with their terms.
+                  </p>
+                  <div className="d-flex justify-content-between">
+                      <button className="btn btn-danger" onClick={handlePaymentPopup}>Cancel</button>
+                      <button className="btn btn-danger" onClick={handleSaveDetails}>Save Details</button>
+                  </div>
+              </div>
+          </div>
+          
+            )}
     
 <h2 className='text-center'>New Arrivals</h2>
 <div className="container-fluid d-flex">

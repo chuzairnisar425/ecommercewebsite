@@ -1,0 +1,134 @@
+/* CSS for Checkout Popup */
+.checkout-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it's on top of other elements */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-popup-content {
+    background-color: white;
+    width: 80%; /* Adjust width as needed */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+
+    /* Center content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-popup-content .row {
+    width: 100%;
+}
+
+.checkout-popup-content .col-md-6 {
+    padding: 20px;
+}
+
+.checkout-popup-content .col-md-6:first-child {
+    border-right: 1px solid #ccc; /* Vertical divider */
+}
+
+.checkout-popup-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.checkout-popup-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.checkout-popup-content .btn {
+    width: 100%;
+    max-width: 200px; /* Limit button width if needed */
+    margin-bottom: 15px;
+}
+
+.checkout-popup-content .form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-popup-content input[type="email"],
+.checkout-popup-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkout-popup-content input[type="email"]:focus,
+.checkout-popup-content input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff; /* Focus color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+.checkout-popup-content small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.checkout-popup-content .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.checkout-popup-content .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.checkout-popup-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.checkout-popup-content a:hover {
+    text-decoration: underline;
+}
+
+.checkout-popup-content strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-popup-content p:last-child {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn i {
+    color: #999;
+    font-size: 1.5rem;
+}
+
+.close-btn:hover i {
+    color: #333;
+}
