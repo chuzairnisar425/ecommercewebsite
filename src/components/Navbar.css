@@ -37,6 +37,7 @@
   width: 800px; /* Increase width as needed */
 }
 
+
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../App.css';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -20,9 +20,10 @@ const Footer = () => {
         <div className="col-md-3">
           <h5>My Account</h5>
           <ul className="list-unstyled">
-            <li className="py-2"><a href="#" className="text-white ">Log in</a></li>
-            <li className="py-2"><a href="#" className="text-white">Sign up</a></li>
-            <li className="py-2"><a href="#" className="text-white">Account</a></li>
+            <li className="py-2">
+              <Link to='/login'><a href="#" className="text-white ">Log in</a></Link></li>
+            <li className="py-2"> <Link to='/signup'><a href="#" className="text-white">Sign up</a></Link></li>
+            <li className="py-2"> <Link to='/signup'><a href="#" className="text-white">Account</a></Link></li>
             <li className="py-2"><a href="#" className="text-white">Order History</a></li>
             <li className="py-2"><a href="#" className="text-white">Wishlist</a></li>
             <li className="py-2"><a href="#" className="text-white">Track your order</a></li>
@@ -32,8 +33,9 @@ const Footer = () => {
         <div className="col-md-3">
           <h5>Information</h5>
           <ul className="list-unstyled">
-            <li className="py-2"><a href="#" className="text-white">About Us</a></li>
-            <li className="py-2"><a href="#" className="text-white">Contact Us</a></li>
+          <li className="py-2"><Link to='/About'><a href="#" className="text-white">About Us</a></Link></li>
+            
+            <li className="py-2"><Link to='/ContactUs'><a href="#" className="text-white">Contact Us</a></Link></li>
             <li className="py-2"><a href="#" className="text-white">Size Guide</a></li>
             <li className="py-2"><a href="#" className="text-white">Careers</a></li>
             <li className="py-2"><a href="#" className="text-white">Store Location</a></li>

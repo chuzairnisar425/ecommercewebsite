@@ -33,13 +33,21 @@ const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <nav className="navbar navbar-expand-md navbar-dark">
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item dropdown">
-                    <Link className="nav-link " to="/categories" role="button" aria-haspopup="true" aria-expanded="false">
-                      All Categories
+  <div className="collapse navbar-collapse" id="navbarNav">
+    <ul className="navbar-nav">
+      <li className="nav-item dropdown">
+      <Link className="nav-link dropdown-toggle" to="/" id="allcategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   All Categories
                     </Link>
-                  </li>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{width:300}}>
+          <h4 className=" ">Categories</h4 >
+          <Link className="dropdown-item " to="/tropical">Tropical</Link>
+          <Link className="dropdown-item" to="/locals-only">Locals Only</Link>
+          <Link className="dropdown-item" to="/denim-collection">Denim Collection</Link>
+          <div className="dropdown-divider"></div>
+       
+        </div>
+      </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Featured Collection
@@ -47,8 +55,8 @@ const Navbar = () => {
                     {/* Add dropdown menu for featured collection */}
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/blog">
-                      Blog
+                  <Link className="nav-link dropdown-toggle" to="/" id="blog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
                     </Link>
                   </li>
                   <li className="nav-item dropdown">

@@ -9,6 +9,8 @@ import ItemSelect from './components/ItemSelect';
 import EmptyCard from './components/EmptyCard';
 import AddItem from './components/AddItem';
 import Shipping from './components/Shipping';
+import ContactUs from './components/ContactUs';
+import About from './components/About';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/EmptyCard" element={<EmptyCard />} />
         <Route path="/AddItem" element={<AddItem />} />
         <Route path="/Shipping" element={<Shipping />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </Router>
   );
