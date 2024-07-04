@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import './HomePage.css';
 import heroImage from '../Images/heroimage.png';
 import arrival1 from '../Images/arrival1.png';
@@ -30,6 +30,30 @@ import TopHeader from './Topheader';
 import Header from './Header';
 
 function HomePage() {
+
+ const [currentImage, setCurrentImage] = useState(0);
+  const images = [arrival1, arrival2, arrival3];
+
+  useEffect(() => {
+    let timer;
+    if (currentImage !== 0) {
+      timer = setTimeout(() => {
+        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      }, 2000); // change image every 2 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [currentImage, images.length]);
+
+  const handleMouseEnter = () => {
+    setCurrentImage(1); // start with the second image on hover
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentImage(0); // revert back to the first image
+  };
+
+
+
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [error, setError] = useState('');
@@ -88,7 +112,7 @@ function HomePage() {
         <div className="row hero-section mb-4">
   <div className="col-md-6 d-flex align-items-center justify-content-center">
     <div className='main-headings text-center'>
-      <h1 className='text-center'>
+      <h1 >
         <span className='lets-headings'>LET'S</span> EXPLORE 
         <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
       </h1>
@@ -135,9 +159,22 @@ function HomePage() {
   <>
    {/* New Arrivals */}
    <h2 className='text-center'>New Arrivals</h2>
-    <div className="col-md-3 ">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival1} alt="Item" />
+   <div className="col-md-3">
+      <div
+        className="card mb-4 position-relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="image-container">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              className={currentImage === index ? "show" : ""}
+              src={img}
+              alt="Item"
+            />
+          ))}
+        </div>
         <span className="position-absolute top-0 end-0 heart-icon">
           <i className="fas fa-heart"></i>
         </span>

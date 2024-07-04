@@ -127,9 +127,9 @@ const Navbar = () => {
               onMouseEnter={handleWishlistMouseEnter}
               onMouseLeave={handleWishlistMouseLeave}
             >
-              <i className="fa fa-heart"></i>
+              <i className="fa fa-heart" style={{cursor:'pointer'}}></i>
               {isWishlistVisible && (
-                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px', zIndex:1000}}>
+                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{  right: 0, width: '500px', zIndex:1000 ,borderRadius:'10px' }}>
                   <Wishlist />
                 </div>
               )}
@@ -139,9 +139,9 @@ const Navbar = () => {
               onMouseEnter={handleCartMouseEnter} 
               onMouseLeave={handleCartMouseLeave}
             >
-              <i className="fa fa-shopping-bag"></i>
+              <i className="fa fa-shopping-bag " style={{cursor:'pointer'}}></i>
               {isCartVisible && (
-                <div className="cart-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px'}}>
+                <div className="cart-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px',borderRadius:'10px'}}>
                   <div className="d-flex flex-column align-items-start">
                     <div className="d-flex justify-content-between w-100">
                       <h5>Your Bag</h5>
