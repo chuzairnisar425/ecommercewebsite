@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ContactUs.css'; // Make sure to create a corresponding CSS file for styling
 import TopHeader from './Topheader';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const ContactUs = () => {
 
@@ -38,7 +39,7 @@ const ContactUs = () => {
 <div>
     <TopHeader/>
    <Navbar/>
-      <div className="contact-us mt-5">
+      <div className="contact-us mt-5 mb-5">
      
       <h1 className="main-heading">Get In Touch</h1>
       <h2 className="sub-heading">Send us an email!!</h2>
@@ -90,6 +91,7 @@ const ContactUs = () => {
         <button type="submit" className="send-button">Send Message</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

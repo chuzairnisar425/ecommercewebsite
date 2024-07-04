@@ -85,22 +85,22 @@ function HomePage() {
 
       <div className="">
         {/* Hero Section */}
-        <div className="row hero-section mb-4 ">
-        <div className="col-md-6 d-flex align-items-center justify-content-center">
-  <div className='main-headings '>
-    <h1 className='text-center'>
-      <span className='lets-headings'>LET'S</span> EXPLORE 
-      <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
-    </h1>
-    <p>Live for Influential and Innovative fashion!</p>
-    <button className="btn btn-danger">Shop Now</button>
+        <div className="row hero-section mb-4">
+  <div className="col-md-6 d-flex align-items-center justify-content-center">
+    <div className='main-headings text-center'>
+      <h1 className='text-center'>
+        <span className='lets-headings'>LET'S</span> EXPLORE 
+        <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
+      </h1>
+      <p>Live for Influential and Innovative fashion!</p>
+      <button className="btn btn-danger">Shop Now</button>
+    </div>
+  </div>
+  <div className="col-md-6 d-flex align-items-center">
+    <img src={heroImage} alt="Hero" className="img-fluid w-100 h-100" />
   </div>
 </div>
 
-          <div className="col-md-6">
-            <img src={heroImage} alt="Hero" className="img-fluid" />
-          </div>
-        </div>
 
         {/* Display Error */}
         {error && <div className="alert alert-danger">{error}</div>}

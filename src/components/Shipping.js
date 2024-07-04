@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import TopHeader from './Topheader';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Shipping = () => {
   // Toggle functionality
@@ -16,7 +19,12 @@ const Shipping = () => {
   };
 
   return (
+    <div> 
+         <TopHeader/>
+         <Navbar/>
     <div className="bg-black p-5">
+   
+
       <div className="container">
         <div className="row">
           <div className="col-md-8">
@@ -136,6 +144,8 @@ const Shipping = () => {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

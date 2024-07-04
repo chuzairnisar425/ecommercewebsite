@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TopHeader from './Topheader';
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import '../App.css'
 import './EmptyCard.css'
@@ -104,61 +105,7 @@ const AddItem = () => {
   return (
     <div className='bg-black'>
     <TopHeader />
-    <div className="top-bar bg-black text-white py-1">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-8 d-flex align-items-center">
-                    <button className="navbar-toggler" type="button">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <nav className="navbar navbar-expand-md navbar-dark">
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" to="/categories" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        All Categories
-                                    </Link>
-                                    <div className="dropdown-menu" aria-labelledby="categoriesDropdown"></div>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Featured Collection
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/blog">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/sale">
-                                        Sale
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div className="col-md-4 d-flex justify-content-end align-items-center">
-                    <Link to="/login" className="btn btn-outline-secondary text-light mr-5">
-                        <i className="fas fa-sign-in-alt"></i> Login
-                    </Link>
-                    <form className="d-flex align-items-center position-relative">
-                        <input
-                            type="text"
-                            className="form-control formBgColor pr-5"
-                            placeholder="What are you looking for?"
-                        />
-                        <button type="submit" className="btn btn-primary position-absolute search-button">
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </form>
-                    <Link className="nav-link text-white mx-2" to="/"><i className="fa fa-heart"></i></Link>
-                    <Link  className="nav-link text-white mr-2" to="/EmptyCard"><i className="fa fa-shopping-bag"></i></Link>
-                    </div>
-            </div>
-        </div>
-    </div>
+    <Navbar/>
     <div className="mx-2 mt-3">
         <div className="row align-items-center border-bottom pb-2">
             <div className="col-md-12">
@@ -345,7 +292,7 @@ const AddItem = () => {
                                 <div className="text-center">
                                     <h2>GUEST CUSTOMERS</h2>
                                     <p>Check out without an account</p>
-                                    <button className="btn btn-light">CHECK OUT AS GUEST</button>
+                                    <button className="btn btn-secondary">CHECK OUT AS GUEST</button>
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -375,63 +322,78 @@ const AddItem = () => {
 
     
 {/* payment method  */}
-    {showPaymentPopup && (
-              <div className="payment-popup">
-              <div className="payment-popup-content">
-                  <h2>Payment Method</h2>
-                  <div className="form-group">
-                      <label>Country or Region</label>
-                      <input type="text" className="form-control" />
-                  </div>
-                  <div className="form-group">
-                      <label>Address Line 1</label>
-                      <input type="text" className="form-control" />
-                  </div>
-                  <h3>Payment</h3>
-                  <div className="payment-options">
-                      <div className={`payment-option ${selectedPaymentMethod === 'Card Payment' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('Card Payment')}>
-                          <FaCreditCard />
-                          <span>Card Payment</span>
-                      </div>
-                      <div className={`payment-option ${selectedPaymentMethod === 'PayPal' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('PayPal')}>
-                          <FaPaypal />
-                          <span>PayPal</span>
-                      </div>
-                      <div className={`payment-option ${selectedPaymentMethod === 'Bank Payment' ? 'selected' : ''}`} onClick={() => handlePaymentMethodChange('Bank Payment')}>
-                          <FaUniversity />
-                          <span>Bank Payment</span>
-                      </div>
-                  </div>
-                  <div className="form-group">
-                      <label>Card Number</label>
-                      <input type="number" className="form-control" />
-                  </div>
-                  <div className="form-row">
-                      <div className="form-group col-md-6">
-                          <label>Expiry Date</label>
-                          <input type="date" className="form-control" />
-                      </div>
-                      <div className="form-group col-md-6">
-                          <label>CVC</label>
-                          <input type="text" className="form-control" />
-                      </div>
-                  </div>
-                  <div className="form-check">
-                      <input type="checkbox" className="form-check-input" />
-                      <label className="form-check-label">Billing is the same as shipping information</label>
-                  </div>
-                  <p>
-                      By providing your card information, you allow Name Shop to charge your card for future payments
-                      in accordance with their terms.
-                  </p>
-                  <div className="d-flex justify-content-between">
-                      <button className="btn btn-danger" onClick={handlePaymentPopup}>Cancel</button>
-                      <button className="btn btn-danger" onClick={handleSaveDetails}>Save Details</button>
-                  </div>
-              </div>
-          </div>
-          
-            )}
+{showPaymentPopup && (
+  <div className="payment-popup">
+    <div className="payment-popup-content">
+      <button className="close-button" onClick={handlePaymentPopup}>×</button>
+      <h2>Payment Method</h2>
+      <div className="form-group">
+        <label>Country or Region</label>
+        <input type="text" className="form-control" />
+      </div>
+      <div className="form-group">
+        <label>Address Line 1</label>
+        <input type="text" className="form-control" />
+      </div>
+      <h3>Payment</h3>
+      <div className="payment-options">
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'Card Payment' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('Card Payment')}
+        >
+          <FaCreditCard />
+          <span>Card Payment</span>
+        </div>
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'PayPal' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('PayPal')}
+        >
+          <FaPaypal />
+          <span>PayPal</span>
+        </div>
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'Bank Payment' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('Bank Payment')}
+        >
+          <FaUniversity />
+          <span>Bank Payment</span>
+        </div>
+      </div>
+      <div className="form-group">
+        <label>Card Number</label>
+        <input type="number" className="form-control" />
+      </div>
+      <div className="form-row">
+        <div className="form-group col-md-6">
+          <label>Expiry Date</label>
+          <input type="date" className="form-control" />
+        </div>
+        <div className="form-group col-md-6">
+          <label>CVC</label>
+          <input type="text" className="form-control" />
+        </div>
+      </div>
+      <div className="form-check d-flex align-items-center">
+        <input type="checkbox" className="form-check-input mr-2" />
+        <label className="form-check-label">Billing is the same as shipping information</label>
+      </div>
+      <p>
+        By providing your card information, you allow Name Shop to charge your card for future payments in accordance with their terms.
+      </p>
+      <div className="d-flex justify-content-between">
+        <button className="btn btn-danger" onClick={handlePaymentPopup}>Cancel</button>
+        <button className="btn btn-danger" onClick={handleSaveDetails}>Save Details</button>
+      </div>
+    </div>
+  </div>
+)}
+
     
 <h2 className='text-center'>New Arrivals</h2>
 <div className="container-fluid d-flex">

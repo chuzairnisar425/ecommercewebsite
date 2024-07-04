@@ -146,40 +146,55 @@
   z-index: 1000;
 }
 
-/* Popup content */
 .payment-popup-content {
+  position: relative; /* Make the content relative for absolute positioning of the close button */
   box-shadow: 2px 2px 2px 7px rgb(187, 234, 187);
-
   background: #131313;
   padding: 20px;
   border-radius: 8px;
- 
   text-align: center;
-
   width: 100%;
-  max-width: 500px; /* or any desired maximum width */
-  margin: 0 auto; /* center align */
-  padding: 20px; /* optional for padding around content */
+  max-width: 800px; 
+  margin: 0 20px; /* Ensure margin on sides for smaller screens */
+  padding: 20px; 
 }
 
 /* Payment options */
 .payment-options {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+/* Close button */
+.close-button {
+  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #cf2830;
+  border-radius: 10px;
+  
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  color: #fdfdfd;
 }
 
 .payment-option {
+  padding: 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
-.payment-option:hover {
- background-color: #fff;
-color: #000;
-border-radius: 3px ;
-}
+
 
  
 
@@ -202,7 +217,35 @@ border-radius: 3px ;
 .form-control:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease-in-out;
 }
+
+.form-control:hover {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+.btn-danger {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  box-shadow: 0 0 10px rgba(217, 83, 79, 0.5);
+}
+
+.payment-option {
+  transition: all 0.3s ease-in-out;
+}
+
+.payment-option:hover {
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+  transform: scale(1.05);
+}
+
 
 .payment-popup-content .btn {
   transition: background-color 0.3s, transform 0.3s;

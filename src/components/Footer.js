@@ -12,7 +12,7 @@ const Footer = () => {
           <form>
             <div className="form-group">
               <label>Receive exclusive promotions, private sales and news</label>
-              <input type="email" className="form-control custom-input text-dark" placeholder="Email" required />
+              <input type="email" className="form-control custom-input text-dark " placeholder="Email ME  " required />
               <button type="submit" className="signupbtn  mt-2">Sign up Now!</button>
             </div>
           </form>

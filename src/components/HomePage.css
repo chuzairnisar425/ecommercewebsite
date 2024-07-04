@@ -14,14 +14,7 @@
     background-color: #ff4d4d;
     color: white;
   }
-  .main-headings {
-    /* text-align: center; */
-    width: 100%;
-  }
-  .main-headings h1{
-    color: white;
-
-  }
+  
   
   .hero-section {
     
@@ -31,12 +24,14 @@
   }
   
   .hero-section h1 {
-    width: 50%;
-    /* text-align: center; */
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
     color: black;
     font-size: 3.5em;
     margin-bottom: 20px;
   }
+  
   .lets-headings{
     
     background-color: white;
