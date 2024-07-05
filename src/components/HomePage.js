@@ -31,26 +31,60 @@ import Header from './Header';
 
 function HomePage() {
 
- const [currentImage, setCurrentImage] = useState(0);
-  const images = [arrival1, arrival2, arrival3];
+  // State to handle the current image index for each card
+  const [currentImages, setCurrentImages] = useState({
+    card1: 0,
+    card2: 0,
+    card3: 0,
+    card4: 0,
+  });
+
+  // State to store intervals for each card
+  const [intervals, setIntervals] = useState({
+    card1: null,
+    card2: null,
+    card3: null,
+    card4: null,
+  });
+
+  // Images arrays for each card
+  const imagesCard1 = [arrival1, arrival2, arrival3];
+  const imagesCard2 = [arrival4, arrival5, arrival6];
+  const imagesCard3 = [arrival7, arrival8, arrival9];
+  const imagesCard4 = [arrival10, arrival11];
+
+  const handleMouseEnterr = (card, images) => {
+    const interval = setInterval(() => {
+      setCurrentImages((prev) => ({
+        ...prev,
+        [card]: (prev[card] + 1) % images.length, // Cycle through images
+      }));
+    }, 1000); // Change image every 1 second
+
+    setIntervals((prev) => ({
+      ...prev,
+      [card]: interval,
+    }));
+  };
+
+  const handleMouseLeavee = (card) => {
+    clearInterval(intervals[card]);
+    setCurrentImages((prev) => ({
+      ...prev,
+      [card]: 0, // Reset to the first image
+    }));
+  };
 
   useEffect(() => {
-    let timer;
-    if (currentImage !== 0) {
-      timer = setTimeout(() => {
-        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-      }, 2000); // change image every 2 seconds
-    }
-    return () => clearTimeout(timer);
-  }, [currentImage, images.length]);
+    // Cleanup intervals on component unmount
+    return () => {
+      Object.values(intervals).forEach(clearInterval);
+    };
+  }, [intervals]);
 
-  const handleMouseEnter = () => {
-    setCurrentImage(1); // start with the second image on hover
-  };
 
-  const handleMouseLeave = () => {
-    setCurrentImage(0); // revert back to the first image
-  };
+
+ 
 
 
 
@@ -157,79 +191,118 @@ function HomePage() {
 ) : (
   // Display default new arrivals
   <>
-   {/* New Arrivals */}
-   <h2 className='text-center'>New Arrivals</h2>
-   <div className="col-md-3">
-      <div
-        className="card mb-4 position-relative"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="image-container">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              className={currentImage === index ? "show" : ""}
-              src={img}
-              alt="Item"
-            />
-          ))}
-        </div>
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-black text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival2} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-black text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
+      {/* New Arrivals */}
+      <h2 className="text-center">New Arrivals</h2>
+      <div className="col-md-3">
+        <div
+          className="card mb-4 position-relative"
+          onMouseEnter={() => handleMouseEnterr('card1', imagesCard1)}
+          onMouseLeave={() => handleMouseLeavee('card1')}
+        >
+          <div className="image-container">
+            {imagesCard1.map((img, index) => (
+              <img
+                key={index}
+                className={currentImages.card1 === index ? 'show' : ''}
+                src={img}
+                alt="Item"
+              />
+            ))}
+          </div>
+          <span className="position-absolute top-0 end-0 heart-icon">
+            <i className="fas fa-heart"></i>
+          </span>
+          <div className="card-body bg-black text-light">
+            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+            <i className="fas fa-shopping-cart float-end"></i>
+            <p className="card-text">Co-Ord Sets</p>
+            <p className="card-text text-danger">$.115.00</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival3} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-black text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
+      <div className="col-md-3">
+        <div
+          className="card mb-4 position-relative"
+          onMouseEnter={() => handleMouseEnterr('card2', imagesCard2)}
+          onMouseLeave={() => handleMouseLeavee('card2')}
+        >
+          <div className="image-container">
+            {imagesCard2.map((img, index) => (
+              <img
+                key={index}
+                className={currentImages.card2 === index ? 'show' : ''}
+                src={img}
+                alt="Item"
+              />
+            ))}
+          </div>
+          <span className="position-absolute top-0 end-0 heart-icon">
+            <i className="fas fa-heart"></i>
+          </span>
+          <div className="card-body bg-black text-light">
+            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+            <i className="fas fa-shopping-cart float-end"></i>
+            <p className="card-text">Co-Ord Sets</p>
+            <p className="card-text text-danger">$.115.00</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="col-md-3">
-      <div className="card mb-4 position-relative">
-        <img className="card-img-top" src={arrival4} alt="Item" />
-        <span className="position-absolute top-0 end-0 heart-icon">
-          <i className="fas fa-heart"></i>
-        </span>
-        <div className="card-body bg-black text-light">
-          <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
-          <p className="card-text">Co-Ord Sets</p>
-          <p className="card-text text-danger">$.115.00</p>
+      <div className="col-md-3">
+        <div
+          className="card mb-4 position-relative"
+          onMouseEnter={() => handleMouseEnterr('card3', imagesCard3)}
+          onMouseLeave={() => handleMouseLeavee('card3')}
+        >
+          <div className="image-container">
+            {imagesCard3.map((img, index) => (
+              <img
+                key={index}
+                className={currentImages.card3 === index ? 'show' : ''}
+                src={img}
+                alt="Item"
+              />
+            ))}
+          </div>
+          <span className="position-absolute top-0 end-0 heart-icon">
+            <i className="fas fa-heart"></i>
+          </span>
+          <div className="card-body bg-black text-light">
+            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+            <i className="fas fa-shopping-cart float-end"></i>
+            <p className="card-text">Co-Ord Sets</p>
+            <p className="card-text text-danger">$.115.00</p>
+          </div>
         </div>
       </div>
-    </div>
-    {/* Repeat for other default items */}
-  </>
+      <div className="col-md-3">
+        <div
+          className="card mb-4 position-relative"
+          onMouseEnter={() => handleMouseEnterr('card4', imagesCard4)}
+          onMouseLeave={() => handleMouseLeavee('card4')}
+        >
+          <div className="image-container">
+            {imagesCard4.map((img, index) => (
+              <img
+                key={index}
+                className={currentImages.card4 === index ? 'show' : ''}
+                src={img}
+                alt="Item"
+              />
+            ))}
+          </div>
+          <span className="position-absolute top-0 end-0 heart-icon">
+            <i className="fas fa-heart"></i>
+          </span>
+          <div className="card-body bg-black text-light">
+            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+            <i className="fas fa-shopping-cart float-end"></i>
+            <p className="card-text">Co-Ord Sets</p>
+            <p className="card-text text-danger">$.115.00</p>
+          </div>
+        </div>
+      </div>
+      {/* Repeat for other default items */}
+    </>
 )}
 </div>
 
