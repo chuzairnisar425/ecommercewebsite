@@ -2,11 +2,16 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import TopHeader from './Topheader';
+import Navbar from './Navbar';
 
 function Login() {
   return (
+    <>
+    <TopHeader/>
+    <Navbar/>
     <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light ">
-      <div className="p-4 bg-black boxshadow" style={{ width: '700px' }}>
+      <div className="p-4 bg-black boxshadow" style={{ width: '700px', borderRadius:'10px' }}>
         <h2 className="text-start mb-2 text-light">Login</h2>
         <form>
           <div className="form-group mb-3">
@@ -44,6 +49,7 @@ function Login() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
