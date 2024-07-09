@@ -153,7 +153,7 @@ function HomePage() {
         <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
       </h1>
       <p>Live for Influential and Innovative fashion!</p>
-      <button className="btn btn-danger">Shop Now</button>
+    <Link to='/categories'>  <button className="btn btn-danger">Shop Now</button></Link>
     </div>
   </div>
   <div className="col-md-6 d-flex align-items-center">
@@ -408,7 +408,9 @@ function HomePage() {
               <div className="col-md-6 text-left">
                 <h2 className="mb-4">YOUR FAVORITE COLLECTION</h2>
                 <p className="mb-4">BE THE FASHION TREND!!</p>
-                <a href="#" className="btn btn-danger">Shop Now</a>
+                <Link to='/categories'>  <button className="btn btn-danger">Shop Now</button></Link>
+
+              
               </div>
               <div className="col-md-6 text-center">
                 <img src={favourite} alt="Fashion Trend" className="img-fluid rounded" />
@@ -552,7 +554,7 @@ function HomePage() {
       <div className="card">
         <img src={shop1} className="card-img-top" alt="Image 1" />
         <div className="overlay d-flex justify-content-center align-items-end ">
-          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+     <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
         </div>
       </div>
     </div>
@@ -560,7 +562,7 @@ function HomePage() {
       <div className="card">
         <img src={shop2} className="card-img-top" alt="Image 2" />
         <div className="overlay d-flex justify-content-center align-items-end">
-          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
         </div>
       </div>
     </div>
@@ -568,7 +570,7 @@ function HomePage() {
       <div className="card">
         <img src={shop3} className="card-img-top" alt="Image 3" />
         <div className="overlay d-flex justify-content-center align-items-end">
-          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
         </div>
       </div>
     </div>
@@ -576,7 +578,7 @@ function HomePage() {
       <div className="card">
         <img src={shop4} className="card-img-top" alt="Image 4" />
         <div className="overlay d-flex justify-content-center align-items-end">
-          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
         </div>
       </div>
     </div>

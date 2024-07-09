@@ -100,7 +100,8 @@ const ViewAllCategories = () => {
                                 </span>
                                 <div className="card-body bg-black text-light">
                                     <h5 className="card-title d-inline">{product.title}</h5>
-                                    <i className="fas fa-shopping-cart float-end"></i>
+                                    <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
                                     <p className="card-text">{product.description}</p>
                                     <p className="card-text text-danger">${product.price.toFixed(2)}</p>
                                 </div>
@@ -114,9 +115,10 @@ const ViewAllCategories = () => {
                                 <i className="fas fa-heart"></i>
                             </span>
                             <div className="card-body bg-black text-light">
-                                <h5 className="card-title d-inline">BIG IMAGE TITLE</h5>
-                                <i className="fas fa-shopping-cart float-end"></i>
-                                <p className="card-text">Big Image Description</p>
+                                <h5 className="card-title d-inline">New Arrival</h5>
+                                <Link to='/additem' >
+                                <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+                                <p className="card-text">New Arrival description</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +137,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -155,7 +158,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -175,7 +179,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -195,7 +200,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -217,8 +223,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -237,8 +243,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -259,8 +265,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -286,8 +292,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -308,8 +314,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -328,8 +334,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -348,8 +354,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -368,8 +374,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -390,8 +396,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -410,8 +416,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
+        <Link to='/additem' >
+        <i className="fas fa-shopping-cart float-end text-white"></i></Link>       
       </div>
       <p className="card-text">Co-Ord Sets</p>
       <p className="card-text text-danger">$.115.00</p>
@@ -430,7 +436,8 @@ const ViewAllCategories = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -452,7 +459,8 @@ const ViewAllCategories = () => {
             <div className="small-circle blue"></div>
             <div className="small-circle pink"></div>
             <div className="small-circle green"></div>
-            <i className="fas fa-shopping-cart"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
           </div>
           <p className="card-text">Co-Ord Sets</p>
           <p className="card-text text-danger">$115.00</p>
@@ -468,7 +476,7 @@ const ViewAllCategories = () => {
             <div className="card">
               <img src={shop1} className="card-img-top" alt="Image 1" />
               <div className="overlay d-flex justify-content-center align-items-end ">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
+              <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
               </div>
             </div>
           </div>
@@ -476,7 +484,7 @@ const ViewAllCategories = () => {
             <div className="card">
               <img src={shop2} className="card-img-top" alt="Image 2" />
               <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4 ">WINTER WEAR</button>
+              <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
               </div>
             </div>
           </div>
@@ -484,7 +492,7 @@ const ViewAllCategories = () => {
             <div className="card">
               <img src={shop3} className="card-img-top" alt="Image 3" />
               <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
+              <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
               </div>
             </div>
           </div>
@@ -492,7 +500,7 @@ const ViewAllCategories = () => {
             <div className="card">
               <img src={shop4} className="card-img-top" alt="Image 4" />
               <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
+              <Link to='/viewallcategories'>     <button className="btn btn-danger mb-4">WINTER WEAR</button></Link>
               </div>
             </div>
           </div>
