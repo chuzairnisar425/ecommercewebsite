@@ -382,7 +382,8 @@ const EmptyCard = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -402,28 +403,8 @@ const EmptyCard = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
-       
-      </div>
-      <p className="card-text">Co-Ord Sets</p>
-      <p className="card-text text-danger">$.115.00</p>
-    </div>
-  </div>
-</div>
-
-<div className="col-md-3">
-  <div className="card mb-4 position-relative">
-    <img className="card-img-top" src={arrival1} alt="Item" />
-    <span className="position-absolute top-0 end-0 heart-icon">
-      <i className="fas fa-heart"></i>
-    </span>
-    <div className="card-body bg-black text-light">
-      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-      <div className="icon-container float-end">
-         <div className="small-circle blue"></div>
-        <div className="small-circle pink"></div>
-        <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>
@@ -444,7 +425,30 @@ const EmptyCard = () => {
          <div className="small-circle blue"></div>
         <div className="small-circle pink"></div>
         <div className="small-circle green"></div>
-        <i className="fas fa-shopping-cart"></i>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+       
+      </div>
+      <p className="card-text">Co-Ord Sets</p>
+      <p className="card-text text-danger">$.115.00</p>
+    </div>
+  </div>
+</div>
+
+<div className="col-md-3">
+  <div className="card mb-4 position-relative">
+    <img className="card-img-top" src={arrival1} alt="Item" />
+    <span className="position-absolute top-0 end-0 heart-icon">
+      <i className="fas fa-heart"></i>
+    </span>
+    <div className="card-body bg-black text-light">
+      <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+      <div className="icon-container float-end">
+         <div className="small-circle blue"></div>
+        <div className="small-circle pink"></div>
+        <div className="small-circle green"></div>
+          <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
        
       </div>
       <p className="card-text">Co-Ord Sets</p>

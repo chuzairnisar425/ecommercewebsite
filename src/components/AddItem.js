@@ -157,7 +157,7 @@ const AddItem = () => {
         <div className="container-fluid">
      
       <div className="row">
-        <div className="col-md-8 d-flex flex-column align-items-center justify-content-center text-white bg-black py-5">
+        <div className="col-md-8 d-flex flex-column align-items-center justify-content-center text-white bg-black py-5" >
         <header className="shopping-header bg-black d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
           <span className="ml-2">SHOPPING BAG</span>
@@ -175,7 +175,7 @@ const AddItem = () => {
           <span>Quantity</span>
           <span>Total</span>
         </div>
-        <div className="col-12 d-flex justify-content-between align-items-center border-bottom-item py-3">
+        <div className="col-12 d-flex justify-content-between align-items-center border-bottom-item py-3" style={{flexWrap:'wrap', display:'flex'}}>
           <img src={arrival1} alt="Product" className="cart-product-image" />
           <div className="product-details">
             <p>Product Description: Red T-shirt</p>
