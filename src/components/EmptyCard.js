@@ -85,7 +85,7 @@ const EmptyCard = () => {
         <div className='bg-black'>
             <TopHeader />
             <Navbar />
-            <div className="mx-2 mt-3">
+            {/* <div className="mx-2 mt-3">
                 <div className="row align-items-center border-bottom pb-2">
                     <div className="col-md-12">
                         <nav className="nav nav-pills">
@@ -129,7 +129,7 @@ const EmptyCard = () => {
                         <span className="text-white">{products.length} Products</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="container-fluid">
                 <div className="row">

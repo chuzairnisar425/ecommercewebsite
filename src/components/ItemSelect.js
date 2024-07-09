@@ -100,7 +100,7 @@ const ItemSelect = () => {
                 </div>
             </div>
             <div className="mx-2 mt-3">
-                <div className="row align-items-center border-bottom pb-2">
+                {/* <div className="row align-items-center border-bottom pb-2">
                     <div className="col-md-12">
                         <nav className="nav nav-pills">
                             <Link className="nav-link active readywear" to="#">READY TO WEAR</Link>
@@ -117,7 +117,7 @@ const ItemSelect = () => {
                             <Link className="nav-link" to="#">Jogging suits</Link>
                         </nav>
                     </div>
-                </div>
+                </div> */}
                 <div className="row mt-2">
                     <div className="col-md-6">
                         <span className="text-white">Filter:</span>

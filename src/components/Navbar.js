@@ -24,8 +24,26 @@ const Navbar = () => {
     setWishlistVisible(false);
   };
 
+  const scrollToCategories = () => {
+    const element = document.getElementById('shopByCategories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const scrollToFeaturedCollection = () => {
+    const element = document.getElementById('featuredCategories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }; const scrollToHappyBlogs = () => {
+    const element = document.getElementById('blogStories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="top-bar bg-black text-white py-1">
+    <div className="top-bar bg-black text-white py-1 ">
       <div className="container">
         <div className="row">
           <div className="col-md-8 d-flex align-items-center">
@@ -33,30 +51,51 @@ const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <nav className="navbar navbar-expand-md navbar-dark">
-  <div className="collapse navbar-collapse" id="navbarNav">
-    <ul className="navbar-nav">
-      <li className="nav-item dropdown">
-      <Link className="nav-link dropdown-toggle" to="/" id="allcategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   All Categories
-                    </Link>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{width:300}}>
-          <h4 className=" ">Categories</h4 >
-          <Link className="dropdown-item " to="/tropical">Tropical</Link>
-          <Link className="dropdown-item" to="/locals-only">Locals Only</Link>
-          <Link className="dropdown-item" to="/denim-collection">Denim Collection</Link>
-          <div className="dropdown-divider"></div>
-       
-        </div>
-      </li>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
                   <li className="nav-item dropdown">
-                    <Link className="nav-link dropdown-toggle" to="/" id="featuredCollectionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      to="#"
+                      id="allcategories"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      onClick={scrollToCategories}
+                    >
+                      All Categories
+                    </Link>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ width: 300 }}>
+                      <h4 className=" ">Categories</h4 >
+                      <Link className="dropdown-item " to="/tropical">Tropical</Link>
+                      <Link className="dropdown-item" to="/locals-only">Locals Only</Link>
+                      <Link className="dropdown-item" to="/denim-collection">Denim Collection</Link>
+                      <div className="dropdown-divider"></div>
+                    </div>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link  className="nav-link dropdown-toggle"
+                      to="#"
+                      id="allcategories"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      onClick={scrollToFeaturedCollection}>
                       Featured Collection
                     </Link>
-                    {/* Add dropdown menu for featured collection */}
                   </li>
                   <li className="nav-item">
-                  <Link className="nav-link dropdown-toggle" to="/" id="blog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                    <Link  className="nav-link dropdown-toggle"
+                      to="#"
+                      id="happystories"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      onClick={scrollToHappyBlogs}>
+                      Blog
                     </Link>
                   </li>
                   <li className="nav-item dropdown">
@@ -122,26 +161,26 @@ const Navbar = () => {
                 <i className="fas fa-search"></i>
               </button>
             </form>
-            <div 
+            <div
               className="nav-link text-white mx-2 position-relative"
               onMouseEnter={handleWishlistMouseEnter}
               onMouseLeave={handleWishlistMouseLeave}
             >
-              <i className="fa fa-heart" style={{cursor:'pointer'}}></i>
+              <i className="fa fa-heart" style={{ cursor: 'pointer' }}></i>
               {isWishlistVisible && (
-                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{  right: 0, width: '500px', zIndex:1000 ,borderRadius:'10px' }}>
+                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '500px', zIndex: 1000, borderRadius: '10px' }}>
                   <Wishlist />
                 </div>
               )}
             </div>
-            <div 
-              className="nav-link text-white position-relative" 
-              onMouseEnter={handleCartMouseEnter} 
+            <div
+              className="nav-link text-white position-relative"
+              onMouseEnter={handleCartMouseEnter}
               onMouseLeave={handleCartMouseLeave}
             >
-              <i className="fa fa-shopping-bag " style={{cursor:'pointer'}}></i>
+              <i className="fa fa-shopping-bag " style={{ cursor: 'pointer' }}></i>
               {isCartVisible && (
-                <div className="cart-dropdown position-absolute bg-white text-black p-3" style={{right: 0, width: '300px',borderRadius:'10px'}}>
+                <div className="cart-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '300px', borderRadius: '10px' }}>
                   <div className="d-flex flex-column align-items-start">
                     <div className="d-flex justify-content-between w-100">
                       <h5>Your Bag</h5>

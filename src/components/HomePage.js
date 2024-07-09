@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './HomePage.css';
+import { Link } from 'react-router-dom';
+
 import heroImage from '../Images/heroimage.png';
 import arrival1 from '../Images/arrival1.png';
 import arrival2 from '../Images/arrival2.png';
@@ -51,7 +53,7 @@ function HomePage() {
   const imagesCard1 = [arrival1, arrival2, arrival3];
   const imagesCard2 = [arrival4, arrival5, arrival6];
   const imagesCard3 = [arrival7, arrival8, arrival9];
-  const imagesCard4 = [arrival10, arrival11];
+  const imagesCard4 = [arrival10, arrival11,arrival2];
 
   const handleMouseEnterr = (card, images) => {
     const interval = setInterval(() => {
@@ -192,119 +194,132 @@ function HomePage() {
   // Display default new arrivals
   <>
       {/* New Arrivals */}
-      <h2 className="text-center">New Arrivals</h2>
-      <div className="col-md-3">
-        <div
-          className="card mb-4 position-relative"
-          onMouseEnter={() => handleMouseEnterr('card1', imagesCard1)}
-          onMouseLeave={() => handleMouseLeavee('card1')}
-        >
-          <div className="image-container">
-            {imagesCard1.map((img, index) => (
-              <img
-                key={index}
-                className={currentImages.card1 === index ? 'show' : ''}
-                src={img}
-                alt="Item"
-              />
-            ))}
-          </div>
-          <span className="position-absolute top-0 end-0 heart-icon">
-            <i className="fas fa-heart"></i>
-          </span>
-          <div className="card-body bg-black text-light">
-            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
-            <p className="card-text">Co-Ord Sets</p>
-            <p className="card-text text-danger">$.115.00</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-3">
-        <div
-          className="card mb-4 position-relative"
-          onMouseEnter={() => handleMouseEnterr('card2', imagesCard2)}
-          onMouseLeave={() => handleMouseLeavee('card2')}
-        >
-          <div className="image-container">
-            {imagesCard2.map((img, index) => (
-              <img
-                key={index}
-                className={currentImages.card2 === index ? 'show' : ''}
-                src={img}
-                alt="Item"
-              />
-            ))}
-          </div>
-          <span className="position-absolute top-0 end-0 heart-icon">
-            <i className="fas fa-heart"></i>
-          </span>
-          <div className="card-body bg-black text-light">
-            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
-            <p className="card-text">Co-Ord Sets</p>
-            <p className="card-text text-danger">$.115.00</p>
+          <h2 className="text-center">New Arrivals</h2>
+        <section className="newArrival d-flex flex-wrap justify-content-center align-items-center">
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card1', imagesCard1)}
+            onMouseLeave={() => handleMouseLeavee('card1')}
+          >
+            <div className="image-container">
+              {imagesCard1.map((img, index) => (
+                <Link to='itemselect'>
+                <img
+                  key={index}
+                  className={currentImages.card1 === index ? 'show' : ''}
+                  src={img}
+                  alt="Item"
+                />
+                </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-md-3">
-        <div
-          className="card mb-4 position-relative"
-          onMouseEnter={() => handleMouseEnterr('card3', imagesCard3)}
-          onMouseLeave={() => handleMouseLeavee('card3')}
-        >
-          <div className="image-container">
-            {imagesCard3.map((img, index) => (
-              <img
-                key={index}
-                className={currentImages.card3 === index ? 'show' : ''}
-                src={img}
-                alt="Item"
-              />
-            ))}
-          </div>
-          <span className="position-absolute top-0 end-0 heart-icon">
-            <i className="fas fa-heart"></i>
-          </span>
-          <div className="card-body bg-black text-light">
-            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
-            <p className="card-text">Co-Ord Sets</p>
-            <p className="card-text text-danger">$.115.00</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-3">
-        <div
-          className="card mb-4 position-relative"
-          onMouseEnter={() => handleMouseEnterr('card4', imagesCard4)}
-          onMouseLeave={() => handleMouseLeavee('card4')}
-        >
-          <div className="image-container">
-            {imagesCard4.map((img, index) => (
-              <img
-                key={index}
-                className={currentImages.card4 === index ? 'show' : ''}
-                src={img}
-                alt="Item"
-              />
-            ))}
-          </div>
-          <span className="position-absolute top-0 end-0 heart-icon">
-            <i className="fas fa-heart"></i>
-          </span>
-          <div className="card-body bg-black text-light">
-            <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
-            <p className="card-text">Co-Ord Sets</p>
-            <p className="card-text text-danger">$.115.00</p>
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card2', imagesCard2)}
+            onMouseLeave={() => handleMouseLeavee('card2')}
+          >
+            <div className="image-container">
+              {imagesCard2.map((img, index) => (
+                <Link to='itemselect'>
+                <img
+                  key={index}
+                  className={currentImages.card2 === index ? 'show' : ''}
+                  src={img}
+                  alt="Item"
+                />
+                </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
           </div>
         </div>
-      </div>
-      {/* Repeat for other default items */}
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card3', imagesCard3)}
+            onMouseLeave={() => handleMouseLeavee('card3')}
+          >
+            <div className="image-container">
+              {imagesCard3.map((img, index) => (
+                 <Link to='itemselect'>
+                 <img
+                   key={index}
+                   className={currentImages.card3 === index ? 'show' : ''}
+                   src={img}
+                   alt="Item"
+                 />
+                 </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card4', imagesCard4)}
+            onMouseLeave={() => handleMouseLeavee('card4')}
+          >
+            <div className="image-container">
+              {imagesCard4.map((img, index) => (
+                 <Link to='itemselect'>
+                 <img
+                   key={index}
+                   className={currentImages.card4 === index ? 'show' : ''}
+                   src={img}
+                   alt="Item"
+                 />
+                 </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
+          </div>
+        </div>
+        {/* Repeat for other default items */}
+        </section>
     </>
 )}
 </div>
+
 
 
         {/* Featured Sections */}
@@ -317,7 +332,7 @@ function HomePage() {
             <div className="text-container bg-black">
               <h3>Lorem Ipsumad</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-              <button className="btn btn-danger">Shop Now</button>
+          <Link to='viewallcategories'><button className="btn btn-danger">Shop Now</button></Link>  
             </div>
           </div>
         </div>
@@ -328,8 +343,8 @@ function HomePage() {
             <div className="text-container">
               <h3>Lorem Ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-              <button className="btn btn-danger">Shop Now</button>
-            </div>
+              <Link to='viewallcategories'><button className="btn btn-danger">Shop Now</button></Link>  
+              </div>
           </div>
           <div className="col-md-6 d-flex align-items-center justify-content-center">
             <img src={summer2} alt="Featured" className="summer1" />
@@ -342,12 +357,12 @@ function HomePage() {
           <div className="row">
             <div className="col-md-6 shop-item">
               <img src={seller1} alt="Shop Men" className="img-fluid" />
-              <button className="btn btn-danger shop-btn">Shop Men</button>
+        <Link to='categories'>     <button className="btn btn-danger shop-btn">Shop Men</button></Link> 
             </div>
             <div className="col-md-6 shop-item">
               <img src={seller2} alt="Shop Women" className="img-fluid" />
-              <button className="btn btn-danger shop-btn">Shop Women</button>
-            </div>
+              <Link to='categories'>     <button className="btn btn-danger shop-btn">Shop Men</button></Link> 
+              </div>
           </div>
         </div>
 
@@ -366,21 +381,21 @@ function HomePage() {
 
               <div className="overlay d-flex align-items-center">
                 <h3 className="mr-3 text-light mb-0">NEW ARRIVALS</h3>
-                <button className="btn btn-danger btn-sm">SHOP NOW</button>
-              </div>
+                <Link to='categories'>     <button className="btn btn-danger btn-sm">SHOP NOW</button></Link> 
+                </div>
             </div>
             <div className="col-md-4 shop-item mb-4">
               <img src={arrival6} alt="New Arrivals" className="img-fluid" />
               <div className="overlay d-flex align-items-center">
                 <h3 className="mr-3 text-light mb-0">NEW ARRIVALS</h3>
-                <button className="btn btn-danger btn-sm">SHOP NOW</button>
-              </div>
+                <Link to='categories'>     <button className="btn btn-danger btn-sm">SHOP NOW</button></Link> 
+                </div>
             </div>
             <div className="col-md-4 shop-item mb-4">
               <img src={arrival7} alt="New Arrivals" className="img-fluid" />
               <div className="overlay d-flex align-items-center">
                 <h3 className="mr-3 text-light mb-0">NEW ARRIVALS</h3>
-                <button className="btn btn-danger btn-sm">SHOP NOW</button>
+        <Link to='categories'>     <button className="btn btn-danger btn-sm">SHOP NOW</button></Link> 
               </div>
             </div>
           </div>
@@ -403,105 +418,176 @@ function HomePage() {
         </div>
 
         {/* BE THE FASHION TREND!! */}
-        <h2 className='text-center mt-4 mb-4'>BE THE FASHION TREND!!</h2>
-        <div className="row new-arrivals mb-4">
-          {/* Repeat this block for each item */}
-          <div className="col-md-3">
-            <div className="card mb-4">
-              <img className="card-img-top" src={arrival8} alt="Item" />
-              <span className="position-absolute top-0 end-0 heart-icon">
-                <i className="fas fa-heart"></i>
-              </span>
-              <div className="card-body  bg-black text-light">
-                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
-                <p className="card-text text-danger">$.115.00</p>
-              </div>
+        <>
+      {/* New Arrivals */}
+          <h2 className="text-center">BE THE FASHION TREND!!</h2>
+        <section className="newArrival d-flex flex-wrap justify-content-center align-items-center">
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card1', imagesCard1)}
+            onMouseLeave={() => handleMouseLeavee('card1')}
+          >
+            <div className="image-container">
+              {imagesCard1.map((img, index) => (
+                <Link to='itemselect'>
+                <img
+                  key={index}
+                  className={currentImages.card1 === index ? 'show' : ''}
+                  src={img}
+                  alt="Item"
+                />
+                </Link>
+              ))}
             </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card mb-4">
-              <img className="card-img-top" src={arrival9} alt="Item" />
-              <span className="position-absolute top-0 end-0 heart-icon">
-                <i className="fas fa-heart"></i>
-              </span>
-              <div className="card-body  bg-black text-light">
-                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
-                <p className="card-text text-danger">$.115.00</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card mb-4">
-              <img className="card-img-top" src={arrival10} alt="Item" />
-              <span className="position-absolute top-0 end-0 heart-icon">
-                <i className="fas fa-heart"></i>
-              </span>
-              <div className="card-body  bg-black text-light">
-                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
-                <p className="card-text text-danger">$.115.00</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card mb-4">
-              <img className="card-img-top" src={arrival11} alt="Item" />
-              <span className="position-absolute top-0 end-0 heart-icon">
-                <i className="fas fa-heart"></i>
-              </span>
-              <div className="card-body  bg-black text-light">
-                <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-                <i className="fas fa-shopping-cart float-end"></i>
-                <p className="card-text">Co-Ord Sets</p>
-                <p className="card-text text-danger">$.115.00</p>
-              </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
             </div>
           </div>
         </div>
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card2', imagesCard2)}
+            onMouseLeave={() => handleMouseLeavee('card2')}
+          >
+            <div className="image-container">
+              {imagesCard2.map((img, index) => (
+                <Link to='itemselect'>
+                <img
+                  key={index}
+                  className={currentImages.card2 === index ? 'show' : ''}
+                  src={img}
+                  alt="Item"
+                />
+                </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
+              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card3', imagesCard3)}
+            onMouseLeave={() => handleMouseLeavee('card3')}
+          >
+            <div className="image-container">
+              {imagesCard3.map((img, index) => (
+                 <Link to='itemselect'>
+                 <img
+                   key={index}
+                   className={currentImages.card3 === index ? 'show' : ''}
+                   src={img}
+                   alt="Item"
+                 />
+                 </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div
+            className="card mb-4 position-relative"
+            onMouseEnter={() => handleMouseEnterr('card4', imagesCard4)}
+            onMouseLeave={() => handleMouseLeavee('card4')}
+          >
+            <div className="image-container">
+              {imagesCard4.map((img, index) => (
+                 <Link to='itemselect'>
+                 <img
+                   key={index}
+                   className={currentImages.card4 === index ? 'show' : ''}
+                   src={img}
+                   alt="Item"
+                 />
+                 </Link>
+              ))}
+            </div>
+            <span className="position-absolute top-0 end-0 heart-icon">
+              <i className="fas fa-heart"></i>
+            </span>
+            <div className="card-body bg-black text-light">
+              <h5 className="card-title d-inline">NEW ARRIVALS</h5>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>              <p className="card-text">Co-Ord Sets</p>
+              <p className="card-text text-danger">$.115.00</p>
+            </div>
+          </div>
+        </div>
+        {/* Repeat for other default items */}
+        </section>
+    </>
 
-        {/* Shop Category */}
-        <h2 className='text-center '>SHOP BY CATEGORY</h2>
-        <div className="row">
-          <div className="col-md-3 mb-4 position-relative">
-            <div className="card">
-              <img src={shop1} className="card-img-top" alt="Image 1" />
-              <div className="overlay d-flex justify-content-center align-items-end ">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4 position-relative">
-            <div className="card">
-              <img src={shop2} className="card-img-top" alt="Image 2" />
-              <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4 position-relative">
-            <div className="card">
-              <img src={shop3} className="card-img-top" alt="Image 3" />
-              <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4 position-relative">
-            <div className="card">
-              <img src={shop4} className="card-img-top" alt="Image 4" />
-              <div className="overlay d-flex justify-content-center align-items-end">
-                <button className="btn btn-danger mb-4">WINTER WEAR</button>
-              </div>
-            </div>
-          </div>
+        {/* // shopByCategories */}
+<section id="shopByCategories" className="shopByCategories">
+  <h2 className='text-center '>SHOP BY CATEGORY</h2>
+  <div className="row">
+    <div className="col-md-3 mb-4 position-relative">
+      <div className="card">
+        <img src={shop1} className="card-img-top" alt="Image 1" />
+        <div className="overlay d-flex justify-content-center align-items-end ">
+          <button className="btn btn-danger mb-4">WINTER WEAR</button>
         </div>
+      </div>
+    </div>
+    <div className="col-md-3 mb-4 position-relative">
+      <div className="card">
+        <img src={shop2} className="card-img-top" alt="Image 2" />
+        <div className="overlay d-flex justify-content-center align-items-end">
+          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        </div>
+      </div>
+    </div>
+    <div className="col-md-3 mb-4 position-relative">
+      <div className="card">
+        <img src={shop3} className="card-img-top" alt="Image 3" />
+        <div className="overlay d-flex justify-content-center align-items-end">
+          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        </div>
+      </div>
+    </div>
+    <div className="col-md-3 mb-4 position-relative">
+      <div className="card">
+        <img src={shop4} className="card-img-top" alt="Image 4" />
+        <div className="overlay d-flex justify-content-center align-items-end">
+          <button className="btn btn-danger mb-4">WINTER WEAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Happy Stories */}
+        <section className="blogStories" id="blogStories">
+
+    
         <h2 className='text-center'>HAPPY STORIES!!</h2>
         <div className="row">
           {/* Card 1 */}
@@ -537,7 +623,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-
+        </section>
       </div>
 
       {/* Newsletter */}

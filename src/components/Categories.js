@@ -55,12 +55,11 @@ const handleSortChange = (event) => {
       <TopHeader />
       {/* Rest of your header and navigation components */}
     <Navbar/>
-      <div className="mx-2 mt-3">
-        {/* Navigation and filter components */}
+      {/* <div className="mx-2 mt-3">
         <div className="col-md-12">
     <nav className="nav nav-pills">
       <Link className="nav-link active readywear" to="#">READY TO WEAR</Link>
-      <Link className="nav-link" to="/ViewAllCategories">View all</Link> {/* Updated here */}
+      <Link className="nav-link" to="/ViewAllCategories">View all</Link> 
       <Link className="nav-link" to="#">Tops</Link>
       <Link className="nav-link" to="#">Outerwear</Link>
       <Link className="nav-link" to="#">Jackets and Coats</Link>
@@ -73,7 +72,7 @@ const handleSortChange = (event) => {
       <Link className="nav-link" to="#">Jogging suits</Link>
     </nav>
   </div>
-</div>
+</div> */}
         {/* Sort by dropdown */}
         <div className="row mt-2">
           <div className="col-md-6">
