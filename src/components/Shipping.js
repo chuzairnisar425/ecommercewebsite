@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import TopHeader from './Topheader';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
+import { FaChevronDown, FaChevronUp, FaCreditCard, FaPaypal, FaUniversity } from 'react-icons/fa';
 const Shipping = () => {
   // Toggle functionality
   const [isOpenShipping, setIsOpenShipping] = useState(false);
@@ -17,6 +16,28 @@ const Shipping = () => {
   const toggleHelp = () => {
     setIsOpenHelp(!isOpenHelp);
   };
+
+// Payment popup functionality
+const [showPaymentPopup, setShowPaymentPopup] = useState(false);
+const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
+
+const handlePaymentPopup = () => {
+    setShowPaymentPopup(!showPaymentPopup);
+};
+
+const handlePaymentMethodChange = (method) => {
+    setSelectedPaymentMethod(method);
+};
+
+const handleSaveDetails = () => {
+    if (!selectedPaymentMethod) {
+        alert('Please select a payment method before saving.');
+    } else {
+        alert(`You have selected ${selectedPaymentMethod} method.`);
+        setShowPaymentPopup(false);
+    }
+};
+
 
   return (
     <div> 
@@ -96,7 +117,7 @@ const Shipping = () => {
                   <label className="form-check-label" htmlFor="credit">Credit Card</label>
                 </div>
               </div>
-              <button type="submit" className="btn btn-light px-4">Next</button>
+              <button type="submit" className="btn btn-light px-4"  onClick={handlePaymentPopup}>Next</button>
             </form>
           
           </div>
@@ -146,6 +167,79 @@ const Shipping = () => {
       </div>
     </div>
     <Footer/>
+    {/* payment method  */}
+{showPaymentPopup && (
+  <div className="payment-popup">
+    <div className="payment-popup-content text-light">
+      <button className="close-button" onClick={handlePaymentPopup}>×</button>
+      <h2>Payment Method</h2>
+      <div className="form-group">
+        <label>Country or Region</label>
+        <input type="text" className="form-control" />
+      </div>
+      <div className="form-group">
+        <label>Address Line 1</label>
+        <input type="text" className="form-control" />
+      </div>
+      <h3>Payment</h3>
+      <div className="payment-options">
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'Card Payment' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('Card Payment')}
+        >
+          <FaCreditCard />
+          <span>Card Payment</span>
+        </div>
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'PayPal' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('PayPal')}
+        >
+          <FaPaypal />
+          <span>PayPal</span>
+        </div>
+        <div
+          className={`payment-option ${
+            selectedPaymentMethod === 'Bank Payment' ? 'selected' : ''
+          }`}
+          onClick={() => handlePaymentMethodChange('Bank Payment')}
+        >
+          <FaUniversity />
+          <span>Bank Payment</span>
+        </div>
+      </div>
+      <div className="form-group">
+        <label>Card Number</label>
+        <input type="number" className="form-control" />
+      </div>
+      <div className="form-row">
+        <div className="form-group col-md-6">
+          <label>Expiry Date</label>
+          <input type="date" className="form-control" />
+        </div>
+        <div className="form-group col-md-6">
+          <label>CVC</label>
+          <input type="text" className="form-control" />
+        </div>
+      </div>
+      <div className="form-check d-flex align-items-center">
+        <input type="checkbox" className="form-check-input mr-2" />
+        <label className="form-check-label">Billing is the same as shipping information</label>
+      </div>
+      <p>
+        By providing your card information, you allow Name Shop to charge your card for future payments in accordance with their terms.
+      </p>
+      <div className="d-flex justify-content-between">
+        <button className="btn btn-danger" onClick={handlePaymentPopup}>Cancel</button>
+        <button className="btn btn-danger" onClick={handleSaveDetails}>Save Details</button>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

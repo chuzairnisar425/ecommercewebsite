@@ -228,7 +228,7 @@ const ItemSelect = () => {
                      
                             <button className="add-to-cart w-100 mb-3">ADD TO CART</button>
                         <br/>
-                            <button className="buy-now w-100">BUY IT NOW</button>
+                      <Link to='/shipping'> <button className="buy-now w-100">BUY IT NOW</button></Link>
                         </div>
                     </div>
                 </div>
