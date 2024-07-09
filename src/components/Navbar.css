@@ -60,6 +60,9 @@ body{
     left: 0 !important; /* Ensure dropdown menu is aligned left */
     right: 0 !important; /* Ensure dropdown menu is aligned right */
   }
+  .wishlist-dropdown{
+      
+  }
 }
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;

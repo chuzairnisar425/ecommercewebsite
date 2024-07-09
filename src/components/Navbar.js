@@ -173,7 +173,7 @@ const Navbar = () => {
             >
               <i className="fa fa-heart" style={{ cursor: 'pointer' }}></i>
               {isWishlistVisible && (
-                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '500px', zIndex: 1000, borderRadius: '10px' }}>
+                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '450px', zIndex: 1000, borderRadius: '10px' }}>
                   <Wishlist />
                 </div>
               )}

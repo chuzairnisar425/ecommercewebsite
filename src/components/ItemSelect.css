@@ -14,13 +14,17 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
+    justify-content: center;
+ 
+    align-items: center;
+    margin: 10px 10px;
+}
   
-  .small-img {
-    height: 150px;
-    width: 100px;
-    object-fit: cover;
-  }
+    .small-img {
+      height: 150px;
+      width: 100px;
+      object-fit: cover;
+    }
   
   .large-image {
     flex-grow: 1;
@@ -35,6 +39,38 @@ body{
     max-width: auto;
     max-height: 700px; /* Adjust as needed */
     object-fit: cover;
+  }
+  .small-img {
+    cursor: pointer;
+    height: 150px;
+    width: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Adding transition for smooth scaling */
+  }
+  
+  .small-img:hover {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+  }
+  
+  .large-img {
+    height: auto;
+    max-width: auto;
+    max-height: 700px; /* Adjust as needed */
+    object-fit: cover;
+    transition: opacity 0.5s ease; /* Adding transition for smooth opacity change */
+  }
+  
+  .large-image {
+    position: relative;
+  }
+  
+  .large-img-enter {
+    opacity: 0;
+  }
+  
+  .large-img-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
   }
   
 
@@ -129,8 +165,11 @@ button.size-button:hover, button.waist-button:hover, button.length-button:hover 
 /* Pickup/Ship Buttons */
 .pickup-ship {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
+
+
 
 .pickup-button, .ship-button {
   background-color: black;
@@ -155,7 +194,7 @@ button.size-button:hover, button.waist-button:hover, button.length-button:hover 
   border: 1px solid white;
   padding: 10px 20px;
   cursor: pointer;
-  /* flex: 1;  */
+  flex: 1; 
   margin-right: 5px;
 }
 .buy-now {
@@ -164,7 +203,7 @@ button.size-button:hover, button.waist-button:hover, button.length-button:hover 
   border: 1px solid white;
   padding: 10px 20px;
   cursor: pointer;
-  /* flex: 1;  */
+  flex: 1; 
   margin-right: 5px;
 }
 
@@ -253,7 +292,10 @@ ul li {
   .content {
       max-width: 100%;
   }
-
+  .large-img{
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
   .pickup-button, .ship-button {
       margin-right: 0;
       margin-bottom: 5px;
@@ -264,6 +306,7 @@ ul li {
   }
 
   .add-to-cart, .buy-now {
+    width: 50%;
       margin-right: 0;
       margin-bottom: 5px;
   }
