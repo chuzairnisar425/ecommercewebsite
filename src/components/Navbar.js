@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import arrival1 from '../Images/arrival1.png';
 import './Navbar.css'; // Custom styles if needed
+import { FiMenu } from 'react-icons/fi'; // Import hamburger icon from react-icons
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false); // State to manage menu visibility
+
   const [isCartVisible, setCartVisible] = useState(false);
   const [isWishlistVisible, setWishlistVisible] = useState(false);
   const cartItemCount = 3; // Example item count
-
+  const toggleMenu = () => {
+    setShowMenu(!showMenu); // Toggle menu state
+  };
   const handleCartMouseEnter = () => {
     setCartVisible(true);
   };
@@ -47,12 +52,12 @@ const Navbar = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-8 d-flex align-items-center">
-            <button className="navbar-toggler" type="button">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <nav className="navbar navbar-expand-md navbar-dark">
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
+          <button className="navbar-toggler" type="button" onClick={toggleMenu}>
+        <FiMenu style={{fontSize:'2rem'}}/> {/* Hamburger icon */}
+      </button>
+      <nav className="navbar navbar-expand-md navbar-dark">
+        <div className={`collapse navbar-collapse ${showMenu ? 'show' : ''}`} id="navbarNav">
+          <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <Link
                       className="nav-link dropdown-toggle"
