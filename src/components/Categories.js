@@ -118,7 +118,8 @@ const handleSortChange = (event) => {
                 </span>
                 <div className="card-body bg-black text-light">
                   <h5 className="card-title d-inline">{product.title}</h5>
-                  <i className="fas fa-shopping-cart float-end"></i>
+                    <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
                   <p className="card-text">{product.description}</p>
                   <p className="card-text text-danger">${product.price.toFixed(2)}</p>
                 </div>
@@ -136,7 +137,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
@@ -149,7 +151,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
@@ -162,7 +165,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
@@ -175,7 +179,8 @@ const handleSortChange = (event) => {
         </span>
         <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
+            <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
           <p className="card-text">Co-Ord Sets</p>
           <p className="card-text text-danger">$.115.00</p>
         </div>
@@ -188,7 +193,8 @@ const handleSortChange = (event) => {
         </span>
         <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
+            <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
           <p className="card-text">Co-Ord Sets</p>
           <p className="card-text text-danger">$.115.00</p>
         </div>
@@ -201,7 +207,8 @@ const handleSortChange = (event) => {
         </span>
         <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
+            <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
           <p className="card-text">Co-Ord Sets</p>
           <p className="card-text text-danger">$.115.00</p>
         </div>
@@ -214,7 +221,8 @@ const handleSortChange = (event) => {
         </span>
         <div className="card-body bg-black text-light">
           <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-          <i className="fas fa-shopping-cart float-end"></i>
+            <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
           <p className="card-text">Co-Ord Sets</p>
           <p className="card-text text-danger">$.115.00</p>
         </div>
@@ -229,7 +237,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
@@ -241,7 +250,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
@@ -253,7 +263,8 @@ const handleSortChange = (event) => {
           </span>
           <div className="card-body bg-black text-light">
             <h5 className="card-title d-inline">NEW ARRIVALS</h5>
-            <i className="fas fa-shopping-cart float-end"></i>
+              <Link to='/additem' >
+              <i className="fas fa-shopping-cart float-end text-white"></i></Link>
             <p className="card-text">Co-Ord Sets</p>
             <p className="card-text text-danger">$115.00</p>
           </div>
