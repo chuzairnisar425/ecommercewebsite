@@ -264,3 +264,35 @@ body{
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+
+  .checkout-popup{
+/* max-width: 60%; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+  }
+  .checkout-popup-content{
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 20px;
+margin-bottom: 20px;
+  }
+  .payment-popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .payment-popup-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

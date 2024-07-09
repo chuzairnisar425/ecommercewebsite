@@ -255,8 +255,8 @@ const EmptyCard = () => {
   {showCheckoutPopup && (
                 <div className="checkout-popup">
                     <div className="checkout-popup-content">
-                    <button className="btn btn-light close-btn" onClick={handleClosePopup}>
-                    <i className="fas fa-times"></i>
+                    <button className="btn btn-danger close-btn" onClick={handleClosePopup}>
+                    <i className="fas fa-times" onClick={handleClosePopup}></i>
                 </button>
                         <div className="row">
                             <div className="col-md-6">
@@ -369,7 +369,7 @@ const EmptyCard = () => {
   
     
 <h2 className='text-center'>New Arrivals</h2>
-<div className="container-fluid d-flex">
+<div className="container-fluid d-flex" style={{display:'flex', flexWrap:'wrap'}}>
 <div className="col-md-3">
   <div className="card mb-4 position-relative">
     <img className="card-img-top" src={arrival1} alt="Item" />
