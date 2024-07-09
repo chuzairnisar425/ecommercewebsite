@@ -13,7 +13,13 @@ body{
     grid-template-columns: 1fr 1fr;
     gap: 5px; /* Reduced gap between cards */
   }
-  
+  /* @media (max-width: 768px) {
+  .card-img-top{
+    width: 100%;
+max-width: 50%;
+height: auto;
+object-fit: cover;
+  }} */
   .left-side .card {
     width: 70%; /* Ensure cards take full width of their container */
   }

@@ -90,7 +90,7 @@ const ViewAllCategories = () => {
                         <span className="text-white">{products.length} Products</span>
                     </div>
                 </div>
-                <div className="container-cards">
+                <div className="container-cards" style={{display:'flex', flexWrap:'wrap'}}>
                     <div className="left-side">
                         {products.map((product) => (
                             <div className="card mb-4 position-relative" key={product.id}>
@@ -109,7 +109,7 @@ const ViewAllCategories = () => {
                     </div>
                     <div className="right-side">
                         <div className="card position-relative">
-                            <img className="card-img-top" src={bigImage} alt="Big Item" />
+                            <img className="card-img-top " src={bigImage} alt="Big Item"  />
                             <span className="position-absolute top-0 end-0 heart-icon">
                                 <i className="fas fa-heart"></i>
                             </span>
@@ -122,7 +122,7 @@ const ViewAllCategories = () => {
                     </div>
                
                 </div>
-                <div className="container-cards">
+                <div className="container-cards" style={{display:'flex', flexWrap:'wrap'}}>
                 <div className="col-md-3">
   <div className="card mb-4 position-relative">
     <img className="card-img-top" src={arrival1} alt="Item" />
@@ -204,7 +204,7 @@ const ViewAllCategories = () => {
   </div>
 </div>
 </div>
-<div className="container-cards">
+<div className="container-cards"style={{display:'flex', flexWrap:'wrap'}}>
 <div className="col-md-3">
   <div className="card mb-4 position-relative">
     <img className="card-img-top" src={arrival1} alt="Item" />
@@ -295,7 +295,7 @@ const ViewAllCategories = () => {
   </div>
 </div>
 </div>
-<div className="container-cards">
+<div className="container-cards"style={{display:'flex', flexWrap:'wrap'}}>
 <div className="col-md-3">
   <div className="card mb-4 position-relative">
     <img className="card-img-top" src={arrival1} alt="Item" />
@@ -377,7 +377,7 @@ const ViewAllCategories = () => {
   </div>
 </div>
 </div>
-<div className="container-cards">
+<div className="container-cards"style={{display:'flex', flexWrap:'wrap'}}>
 <div className="col-md-3">
   <div className="card mb-4 position-relative">
     <img className="card-img-top" src={arrival1} alt="Item" />
@@ -464,7 +464,7 @@ const ViewAllCategories = () => {
  {/* Shop Category */}
  <h2 className='text-center '>SHOP BY CATEGORY</h2>
         <div className="row">
-          <div className="col-md-3 mb-4 position-relative">
+          <div className="col-md-3 mb-4 position-relative" style={{display:'flex', flexWrap:'wrap'}}  >
             <div className="card">
               <img src={shop1} className="card-img-top" alt="Image 1" />
               <div className="overlay d-flex justify-content-center align-items-end ">
