@@ -173,7 +173,7 @@ const Navbar = () => {
             >
               <i className="fa fa-heart" style={{ cursor: 'pointer' }}></i>
               {isWishlistVisible && (
-                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '450px', zIndex: 1000, borderRadius: '10px' }}>
+                <div className="wishlist-dropdown position-absolute bg-white text-black p-3" style={{ right: 0, width: '400px', zIndex: 1000, borderRadius: '10px' }}>
                   <Wishlist />
                 </div>
               )}
@@ -217,11 +217,11 @@ const Navbar = () => {
 
 const Wishlist = () => {
   return (
-    <div className="d-flex flex-column align-items-center mt-3">
+    <div className="d-flex flex-column align-items-center mt-3" >
       <h1 className="text-center">Company’s Name</h1>
       <h2 className="text-center mt-3">Welcome back</h2>
       <p className="text-center">Log in for faster checkout and see all your benefits.</p>
-      <div className="container-transition hover-animation w-100" style={{ maxWidth: "400px" }}>
+      <div className="container-transition hover-animation w-100" style={{ maxWidth: "300px" }}>
         <form>
           <div className="form-group">
             <label htmlFor="email">Email</label>
