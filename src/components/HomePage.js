@@ -148,7 +148,7 @@ function HomePage() {
         <div className="row hero-section mb-4">
   <div className="col-md-6 d-flex align-items-center justify-content-center">
     <div className='main-headings text-center'>
-      <h1>
+      <h1 className="heroheading text-start">
         <span className='lets-headings'>LET'S</span> EXPLORE 
         <span className='bg-red text-light'> UNIQUE</span> CLOTHES.
       </h1>
