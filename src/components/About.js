@@ -11,7 +11,7 @@ const About = () => {
 <TopHeader/>
 
 <Navbar/>
-    <div className="main-container">
+    <div className="main-container " style={{display:'flex', flexWrap:'wrap'}}>
       <div className="left-content">
         <img src={arrival1 }alt="About Image" className="about-image" />
       </div>

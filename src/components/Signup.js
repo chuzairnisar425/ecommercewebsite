@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import './Signup.css';
 import TopHeader from './Topheader';
 import Navbar from './Navbar';
 function SignUp() {
@@ -10,8 +11,8 @@ function SignUp() {
     <>
     <TopHeader/>
     <Navbar/>
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light  p-5">
-      <div className=" p-4 bg-black text-white border-light boxshadow">
+    <div className="d-flex justify-content-center align-items-center  bg-black text-light  p-5" >
+      <div className=" p-4 bg-black text-white border-light boxshadow " >
         <h2 className="text-start mb-4 text-light">Sign Up</h2>
         <div className="row align-items-center" style={{ height: '100%' }}>
           <div className="col-md-6 d-flex flex-column justify-content-center">

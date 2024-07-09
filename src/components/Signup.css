@@ -40,4 +40,8 @@ body{
   .sign-up-card .text-light a:hover {
     color: #00aced;
   }
-  
+  @media (max-width: 768px) {
+    .boxshadow{
+margin-top: 140px;
+    }
+    }

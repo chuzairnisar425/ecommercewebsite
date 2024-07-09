@@ -11,7 +11,7 @@ function Login() {
     <TopHeader/>
     <Navbar/>
     <div className="d-flex justify-content-center align-items-center vh-100 bg-black text-light ">
-      <div className="p-4 bg-black boxshadow" style={{ width: '700px', borderRadius:'10px' }}>
+      <div className="p-4 bg-black boxshadow" style={{ width: '600px', borderRadius:'10px' }}>
         <h2 className="text-start mb-2 text-light">Login</h2>
         <form>
           <div className="form-group mb-3">
