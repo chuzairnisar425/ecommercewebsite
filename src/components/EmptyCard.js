@@ -143,7 +143,7 @@ const EmptyCard = () => {
                         </header>
                         <hr className="divider" />
                         <h2 className='mt-4'>Your cart is empty!!</h2>
-                        <button className="btn btn-light my-3">Continue Shopping</button>
+                    <Link to='/viewallcategories'>    <button className="btn btn-light my-3">Continue Shopping</button></Link>
                         <p>
                             Have an account?{' '}
                             <Link to="/Login" className="text-light">
